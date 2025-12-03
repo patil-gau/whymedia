@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .text-why { 
+        fill: #9B9B9B; 
+        font-family: 'Poppins', 'Arial Rounded MT Bold', -apple-system, sans-serif;
+        font-size: 110px; 
+        font-weight: 600;
+        letter-spacing: -3px;
+      }
+      .text-media { 
+        fill: #2D2D2D; 
+        font-family: 'Poppins', 'Arial Rounded MT Bold', -apple-system, sans-serif;
+        font-size: 110px; 
+        font-weight: 700;
+        letter-spacing: -2px;
+      }
+    </style>
+  </defs>
+  
+  <!-- Heart Y icon -->
+  <g transform="translate(10, 20)">
+    <path fill="#FF3333" d="
+      M 50 40
+      C 50 20, 60 10, 75 10
+      C 85 10, 92 15, 95 25
+      C 98 15, 105 10, 115 10
+      C 130 10, 140 20, 140 40
+      L 140 120
+      C 140 150, 130 175, 112 185
+      C 102 190, 95 193, 95 193
+      C 95 193, 88 190, 78 185
+      C 60 175, 50 150, 50 120
+      Z
+    "/>
+    <path fill="#FFFFFF" d="
+      M 75 52 L 95 32 L 115 52 L 95 72 Z
+      M 82 80 L 82 125 C 82 135, 87 147, 95 155
+      C 103 147, 108 135, 108 125 L 108 80 L 95 90 Z
+    "/>
+  </g>
+  
+  <!-- Text -->
+  <text class="text-why" x="200" y="110">why</text>
+  <text class="text-media" x="200" y="180">media</text>
+</svg>

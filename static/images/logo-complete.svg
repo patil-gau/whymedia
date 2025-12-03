@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .text-why { 
+        fill: #000000; 
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+        font-size: 48px; 
+        font-weight: 600;
+        letter-spacing: -1px;
+      }
+      .text-media { 
+        fill: #000000; 
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+        font-size: 48px; 
+        font-weight: 700;
+        letter-spacing: -1px;
+      }
+    </style>
+  </defs>
+  
+  <!-- Red Heart Y Shape -->
+  <g id="heart-y" transform="translate(20, 30)">
+    <!-- Outer heart shape -->
+    <path fill="#FF3333" d="M 40 30 C 40 15 47.5 7.5 57.5 7.5 C 65 7.5 70 11 72.5 17.5 C 75 11 80 7.5 87.5 7.5 C 97.5 7.5 105 15 105 30 L 105 95 C 105 117.5 97.5 137.5 85 145 C 77.5 150 72.5 152.5 72.5 152.5 C 72.5 152.5 67.5 150 60 145 C 47.5 137.5 40 117.5 40 95 Z"/>
+    
+    <!-- Inner white Y cutout -->
+    <path fill="#FFFFFF" d="M 57.5 40 L 72.5 25 L 87.5 40 L 72.5 55 Z M 62.5 60 L 62.5 97.5 C 62.5 105 66 115 72.5 121.5 C 79 115 82.5 105 82.5 97.5 L 82.5 60 L 72.5 69 Z"/>
+  </g>
+  
+  <!-- "why" text in black -->
+  <text class="text-why" x="160" y="90">why</text>
+  
+  <!-- "media" text in black -->
+  <text class="text-media" x="160" y="140">media</text>
+</svg>

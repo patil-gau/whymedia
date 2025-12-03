@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhyMedia - Creative Production House That Delivers Results</title>
+    
+    <!-- Favicon -->
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="WhyMedia - Creative Production House That Delivers Results">
+    <meta property="og:description" content="We don't just shoot videos. We create campaigns that convert. Performance marketing, social media, production - all driven by results.">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WhyMedia - Creative Production House">
+    <meta name="twitter:description" content="We don't just shoot videos. We create campaigns that convert.">
+    
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    
+    <!-- Load fonts with font-display swap for faster rendering -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Load CSS first -->
+    <link rel="stylesheet" href="static/css/styles.css">
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF3333',
+                        dark: '#0A0A0A',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-dark antialiased">
+    
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="flex items-center justify-center">
+        <div class="loading-logo-container">
+            <img src="static/logo/WhyMedia.png" alt="WhyMedia Logo" class="loading-logo">
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="11" stroke="#FF3333" stroke-width="1.5" fill="none" opacity="0.9"/>
+            <circle cx="12" cy="12" r="8" stroke="#FF3333" stroke-width="1" fill="none" opacity="0.7"/>
+            <rect x="9" y="9" width="6" height="6" rx="1" fill="#FF3333" opacity="0.9"/>
+        </svg>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="absolute top-0 w-full z-50">
+        <div class="max-w-container mx-auto px-6 lg:px-12 pt-2 pb-0 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center group">
+                <img src="static/logo/WhyMedia.png" 
+                     alt="WhyMedia - Creative Production House" 
+                     style="width: 250px; height: 150px; min-width: 250px; min-height: 150px;"
+                     class="transition-transform duration-300 group-hover:scale-105">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="nav-link text-sm font-medium text-gray-700 hover:text-primary">Services</a>
+                <a href="#studio" class="nav-link text-sm font-medium text-gray-700 hover:text-primary">Studio</a>
+                <a href="#about" class="nav-link text-sm font-medium text-gray-700 hover:text-primary">About</a>
+                <a href="#contact" class="btn-hover inline-block px-6 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg">
+                    Let's Talk
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-700" id="mobileMenuBtn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 md:hidden">
+        <div class="absolute top-6 right-6">
+            <button id="closeMobileMenu" class="text-gray-700 hover:text-primary transition-colors">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <h2 class="text-3xl font-bold text-primary mb-4">WhyMedia</h2>
+            <a href="#services" class="text-2xl font-semibold text-gray-800 mobile-menu-link hover:text-primary transition-colors">Services</a>
+            <a href="#studio" class="text-2xl font-semibold text-gray-800 mobile-menu-link hover:text-primary transition-colors">Studio</a>
+            <a href="#about" class="text-2xl font-semibold text-gray-800 mobile-menu-link hover:text-primary transition-colors">About</a>
+            <a href="#contact" class="px-8 py-3 bg-primary text-white text-lg font-semibold rounded-lg hover:scale-105 transition-transform">Let's Talk</a>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-6 lg:px-12 pt-20 relative overflow-hidden">
+        <!-- Background Animation Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse-slow"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse-slow delay-300"></div>
+        </div>
+        
+        <div class="max-w-container mx-auto w-full text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black letter-tight mb-8 opacity-0 animate-fade-in-up leading-[1.1] md:leading-[1.1] lg:leading-[1.1] hero-bold">
+                <span class="text-primary block">If It Doesn't Freeze Time,</span>
+                <span class="block mt-3 md:mt-4 lg:mt-5">It Never Left Our Studio</span>
+            </h1>
+            
+            <p class="handwritten text-3xl md:text-4xl lg:text-5xl text-dark font-bold max-w-3xl mx-auto mb-8 opacity-0 animate-fade-in-up delay-200">
+                Explore the Stories That Froze Time
+            </p>
+            
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 scroll-indicator opacity-0 animate-fade-in delay-600">
+                <div class="flex flex-col items-center">
+                    <span class="text-xs text-gray-500 mb-2">Scroll</span>
+                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Manifesto Section -->
+    <section id="about" class="py-24 md:py-32 px-6 lg:px-12 bg-dark text-white puzzle-section relative overflow-hidden">
+        <div class="max-w-container mx-auto">
+            <div class="max-w-5xl mx-auto">
+                <!-- Top Heading -->
+                <div class="mb-12 scroll-animate">
+                    <p class="handwritten text-3xl md:text-4xl lg:text-5xl text-white font-bold mb-6">
+                        Not just another production studio in Bangalore but..
+                    </p>
+                </div>
+                
+                <!-- Main Copy with Puzzle Words -->
+                <div class="mb-16 scroll-animate delay-200">
+                    <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-8" style="line-height: 1.4;">
+                        We're <span class="puzzle-word text-white">master time-freezers</span> <span class="text-gray-400">(capturing moments that matter)</span> creating <span class="puzzle-word text-white">visual stories</span> that <span class="puzzle-word text-white">stop your audience</span> mid-scroll <span class="text-gray-400">(and make them hit replay)</span>
+                    </h2>
+                </div>
+                
+                <!-- Mission Statement with Puzzle Words -->
+                <div class="scroll-animate delay-300">
+                    <h3 class="text-xl md:text-2xl font-bold mb-6" style="line-height: 1.5;">
+                        Our mission is <span class="puzzle-word text-white">crystal clear:</span>
+                    </h3>
+                    <p class="text-base md:text-lg text-gray-400 max-w-3xl" style="line-height: 1.8;">
+                        We don't just capture footage—we <span class="puzzle-word text-white">freeze moments in time</span> that tell your brand's story. Every <span class="puzzle-word text-white">frame</span>, every <span class="puzzle-word text-white">second</span>, every <span class="puzzle-word text-white">shot</span> is crafted to <span class="puzzle-word text-white">make time stand still</span> and your message <span class="puzzle-word text-white">unforgettable</span>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Crime Scene Tape Transition Section -->
+    <section id="tape-section" class="relative py-0 bg-dark overflow-visible z-50">
+        <!-- Crime Scene Tapes -->
+        <div class="relative tape-stage" style="min-height: 320px;">
+            <!-- Tape Strip 1 - WARNING -->
+            <div class="crime-tape crime-tape-1 absolute top-6 w-full transform -rotate-2 z-50">
+                <div class="tape-inner tape-scroll-left">
+                    <span class="tape-text">⚠ WARNING! ⚠</span>
+                    <span class="tape-text">⚠ WARNING! ⚠</span>
+                    <span class="tape-text">⚠ WARNING! ⚠</span>
+                    <span class="tape-text">⚠ WARNING! ⚠</span>
+                    <span class="tape-text">⚠ WARNING! ⚠</span>
+                    <span class="tape-text">⚠ WARNING! ⚠</span>
+                    <span class="tape-text">⚠ WARNING! ⚠</span>
+                    <span class="tape-text">⚠ WARNING! ⚠</span>
+                </div>
+            </div>
+            
+            <!-- Tape Strip 2 - TIME FREEZES HERE -->
+            <div class="crime-tape crime-tape-2 absolute top-26 w-full transform rotate-1 z-50">
+                <div class="tape-inner tape-scroll-right">
+                    <span class="tape-text">TIME FREEZES HERE</span>
+                    <span class="tape-text">TIME FREEZES HERE</span>
+                    <span class="tape-text">TIME FREEZES HERE</span>
+                    <span class="tape-text">TIME FREEZES HERE</span>
+                    <span class="tape-text">TIME FREEZES HERE</span>
+                    <span class="tape-text">TIME FREEZES HERE</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Work Section -->
+    <section id="work" class="pt-0 pb-24 md:pb-32 px-6 lg:px-12 bg-dark text-white relative" style="margin-top: -60px;">
+        <div class="max-w-container mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-20 scroll-animate" style="padding-top: 80px;">
+                <!-- <h2 class="text-5xl md:text-7xl font-black letter-tight mb-6">
+                    Our <span class="text-primary">Work</span>
+                </h2> -->
+                <p class="handwritten text-3xl md:text-4xl text-gray-300 font-bold">
+                    Content That Freezes Time
+                </p>
+            </div>
+            
+            <!-- Two Column Layout -->
+            <div class="grid lg:grid-cols-12 gap-8 lg:gap-12">
+                <!-- Left Side - Service Categories -->
+                <div class="lg:col-span-4 space-y-6">
+                    <div class="work-category active" data-category="podcasts">
+                        <h3 class="work-category-text">Podcasts</h3>
+                    </div>
+                    <div class="work-category" data-category="reels">
+                        <h3 class="work-category-text">Reels</h3>
+                    </div>
+                    <div class="work-category" data-category="ad-shoots">
+                        <h3 class="work-category-text">Ad Shoots</h3>
+                    </div>
+                    <div class="work-category" data-category="events">
+                        <h3 class="work-category-text">Events</h3>
+                    </div>
+                    <div class="work-category" data-category="case-studies">
+                        <h3 class="work-category-text">Case Studies</h3>
+                    </div>
+                </div>
+                
+                <!-- Right Side - Video Showcase -->
+                <div class="lg:col-span-8">
+                    <div class="work-video-container relative">
+                        <!-- Video Display Area -->
+                        <div class="work-video-wrapper bg-black/40 rounded-3xl overflow-hidden border border-white/10 backdrop-blur-sm">
+                            <div class="work-video-scroll-area" id="workVideoScrollArea">
+                                <!-- Podcasts Videos (Horizontal) -->
+                                <div class="work-video-item active" data-category="podcasts" data-video-index="0">
+                                    <div class="aspect-video bg-black rounded-2xl overflow-hidden">
+                                        <iframe 
+                                            class="w-full h-full" 
+                                            src="https://www.youtube.com/embed/r4dzWsvhK9E" 
+                                            title="Podcast" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                                
+                                <div class="work-video-item" data-category="podcasts" data-video-index="1">
+                                    <div class="aspect-video bg-black rounded-2xl overflow-hidden">
+                                        <iframe 
+                                            class="w-full h-full" 
+                                            src="https://www.youtube.com/embed/r4dzWsvhK9E" 
+                                            title="Podcast" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                                
+                                <!-- Reels Videos (Vertical) -->
+                                <div class="work-video-item" data-category="reels" data-video-index="0">
+                                    <div class="aspect-[9/16] max-w-md mx-auto bg-black rounded-2xl overflow-hidden">
+                                        <iframe 
+                                            class="w-full h-full" 
+                                            src="https://www.youtube.com/embed/JMXi0D8-qBE" 
+                                            title="Reel" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                                
+                                <div class="work-video-item" data-category="reels" data-video-index="1">
+                                    <div class="aspect-[9/16] max-w-md mx-auto bg-black rounded-2xl overflow-hidden">
+                                        <iframe 
+                                            class="w-full h-full" 
+                                            src="https://www.youtube.com/embed/JMXi0D8-qBE" 
+                                            title="Reel" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                                
+                                <!-- Ad Shoots (Horizontal) -->
+                                <div class="work-video-item" data-category="ad-shoots" data-video-index="0">
+                                    <div class="aspect-video bg-black rounded-2xl overflow-hidden">
+                                        <iframe 
+                                            class="w-full h-full" 
+                                            src="https://www.youtube.com/embed/r4dzWsvhK9E" 
+                                            title="Ad Shoot" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                                
+                                <div class="work-video-item" data-category="ad-shoots" data-video-index="1">
+                                    <div class="aspect-video bg-black rounded-2xl overflow-hidden">
+                                        <iframe 
+                                            class="w-full h-full" 
+                                            src="https://www.youtube.com/embed/r4dzWsvhK9E" 
+                                            title="Ad Shoot" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                                
+                                <!-- Events (Horizontal) -->
+                                <div class="work-video-item" data-category="events" data-video-index="0">
+                                    <div class="aspect-video bg-black rounded-2xl overflow-hidden">
+                                        <iframe 
+                                            class="w-full h-full" 
+                                            src="https://www.youtube.com/embed/r4dzWsvhK9E" 
+                                            title="Event Coverage" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                                
+                                <div class="work-video-item" data-category="events" data-video-index="1">
+                                    <div class="aspect-video bg-black rounded-2xl overflow-hidden">
+                                        <iframe 
+                                            class="w-full h-full" 
+                                            src="https://www.youtube.com/embed/r4dzWsvhK9E" 
+                                            title="Event Coverage" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                                
+                                <!-- Case Studies (Horizontal) -->
+                                <div class="work-video-item" data-category="case-studies" data-video-index="0">
+                                    <div class="aspect-video bg-black rounded-2xl overflow-hidden">
+                                        <iframe 
+                                            class="w-full h-full" 
+                                            src="https://www.youtube.com/embed/r4dzWsvhK9E" 
+                                            title="Case Study" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                                
+                                <div class="work-video-item" data-category="case-studies" data-video-index="1">
+                                    <div class="aspect-video bg-black rounded-2xl overflow-hidden">
+                                        <iframe 
+                                            class="w-full h-full" 
+                                            src="https://www.youtube.com/embed/r4dzWsvhK9E" 
+                                            title="Case Study" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Navigation Dots -->
+                            <div class="work-video-dots flex justify-center gap-2 py-6">
+                                <!-- Dots will be dynamically generated -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="pt-12 pb-24 md:pt-16 md:pb-32 px-6 lg:px-12 bg-gray-50">
+        <div class="max-w-container mx-auto">
+            <!-- Section Header with Large Static Text -->
+            <div class="mb-16 scroll-animate">
+                <!-- Large Static Text -->
+                <div class="text-center">
+                    <h2 class="services-big-title">
+                        What We <span class="text-primary">Actually</span> Do?
+                </h2>
+                </div>
+                
+                <!-- Subtitle -->
+                <p class="handwritten text-3xl md:text-4xl lg:text-5xl text-gray-700 font-bold text-center mt-8">
+                    we are FULL STACK
+                </p>
+            </div>
+            
+            <!-- Services Content with Signpost -->
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <!-- Left Side - Service Content -->
+                <div class="service-content-wrapper">
+                    <!-- Podcasts Content -->
+                    <div class="service-content active" data-service="podcasts">
+                        <div class="service-badge">
+                            <span class="badge-icon">🎙️</span>
+                            <span class="badge-text">AUDIO MAGIC</span>
+                        </div>
+                        <h3 class="text-4xl md:text-5xl font-black mb-6 letter-tight leading-tight">
+                            Your Voice, <span class="text-primary">Amplified</span>.<br>
+                            Your Story, <span class="highlight-underline">Immortalized</span>.
+                        </h3>
+                        <div class="service-stats mb-6">
+                            <div class="stat-item">
+                                <span class="stat-number">10K+</span>
+                                <span class="stat-label">Hours Produced</span>
+                            </div>
+                        </div>
+                        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
+                            Great podcasts aren't recorded<span class="text-primary font-bold">*</span> they're sculpted.
+                        </p>
+                        <ul class="service-features">
+                            <li>✓ Crisp audio that sounds like butter</li>
+                            <li>✓ Aesthetic visuals people screenshot</li>
+                            <li>✓ Smooth edits that feel cinematic</li>
+                        </ul>
+                        <p class="text-base text-gray-600 mt-4 italic">
+                            You bring the ideas. We make them legendary.
+                        </p>
+                    </div>
+                    
+                    <!-- Reels Content -->
+                    <div class="service-content" data-service="reels">
+                        <div class="service-badge">
+                            <span class="badge-icon">⚡</span>
+                            <span class="badge-text">VIRAL FACTORY</span>
+                        </div>
+                        <h3 class="text-4xl md:text-5xl font-black mb-6 letter-tight leading-tight">
+                            Reels That Hit Like a <span class="text-primary">Plot Twist</span>.
+                        </h3>
+                        <div class="service-stats mb-6">
+                            <div class="stat-item">
+                                <span class="stat-number">50M+</span>
+                                <span class="stat-label">Views Generated</span>
+                            </div>
+                        </div>
+                        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
+                            Attention spans are shrinking. Your content shouldn't.
+                        </p>
+                        <ul class="service-features">
+                            <li>✓ Fast cuts that keep thumbs frozen</li>
+                            <li>✓ Bold hooks in the first 0.5 seconds</li>
+                            <li>✓ Visuals people can't scroll past</li>
+                        </ul>
+                        <p class="text-base text-gray-600 mt-4 italic">
+                            They'll watch. They'll rewatch. They'll share. They'll save.
+                        </p>
+                    </div>
+                    
+                    <!-- Ad Shoots Content -->
+                    <div class="service-content" data-service="ad-shoots">
+                        <div class="service-badge">
+                            <span class="badge-icon">🎬</span>
+                            <span class="badge-text">COMMERCIAL POWER</span>
+                        </div>
+                        <h3 class="text-4xl md:text-5xl font-black mb-6 letter-tight leading-tight">
+                            Ads That Don't Feel Like Ads<br>
+                            <span class="highlight-underline">They Feel Like Obsessions</span>.
+                        </h3>
+                        <div class="service-stats mb-6">
+                            <div class="stat-item">
+                                <span class="stat-number">3.2x</span>
+                                <span class="stat-label">Avg Conversion Lift</span>
+                            </div>
+                        </div>
+                        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
+                            We build ad films that blend <span class="font-bold">storytelling</span> with <span class="font-bold">psychology</span>.
+                        </p>
+                        <ul class="service-features">
+                            <li>✓ Your brand becomes the hero</li>
+                            <li>✓ The viewer becomes the believer</li>
+                            <li>✓ Conversion rates become bragging rights</li>
+                        </ul>
+                        <p class="text-base text-gray-600 mt-4 italic">
+                            High energy. High clarity. Engineered for impact.
+                        </p>
+                    </div>
+                    
+                    <!-- Events Content -->
+                    <div class="service-content" data-service="events">
+                        <div class="service-badge">
+                            <span class="badge-icon">🎪</span>
+                            <span class="badge-text">LIVE CAPTURE</span>
+                        </div>
+                        <h3 class="text-4xl md:text-5xl font-black mb-6 letter-tight leading-tight">
+                            Events That Don't Fade<br>
+                            <span class="text-primary">They Live Forever</span> Online.
+                        </h3>
+                        <div class="service-stats mb-6">
+                            <div class="stat-item">
+                                <span class="stat-number">200+</span>
+                                <span class="stat-label">Events Covered</span>
+                            </div>
+                        </div>
+                        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
+                            We capture what most teams miss<span class="text-primary font-bold">*</span> the real energy.
+                        </p>
+                        <ul class="service-features">
+                            <li>✓ Corporate events to product launches</li>
+                            <li>✓ Dynamic edits & crisp highlights</li>
+                            <li>✓ Storytelling that echoes beyond the venue</li>
+                        </ul>
+                        <p class="text-base text-gray-600 mt-4 italic">
+                            One event. Infinite replays.
+                        </p>
+                    </div>
+                    
+                    <!-- Product Photography Content -->
+                    <div class="service-content" data-service="product-photography">
+                        <div class="service-badge">
+                            <span class="badge-icon">📸</span>
+                            <span class="badge-text">PRODUCT SEDUCTION</span>
+                        </div>
+                        <h3 class="text-4xl md:text-5xl font-black mb-6 letter-tight leading-tight">
+                            We Don't Take Photos.<br>
+                            We Make Products <span class="highlight-underline">Irresistible</span>.
+                        </h3>
+                        <div class="service-stats mb-6">
+                            <div class="stat-item">
+                                <span class="stat-number">5000+</span>
+                                <span class="stat-label">Products Shot</span>
+                            </div>
+                        </div>
+                        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
+                            Your product deserves more than a white background.
+                        </p>
+                        <ul class="service-features">
+                            <li>✓ Visuals that seduce attention</li>
+                            <li>✓ Stop scrolling moments</li>
+                            <li>✓ "Maybe later" becomes "add to cart"</li>
+                        </ul>
+                        <p class="text-base text-gray-600 mt-4 italic">
+                            Clean. Crisp. Premium. Designed to sell.
+                        </p>
+                    </div>
+                    
+                    <!-- Case Studies Content -->
+                    <div class="service-content" data-service="case-studies">
+                        <div class="service-badge">
+                            <span class="badge-icon">📊</span>
+                            <span class="badge-text">SUCCESS STORIES</span>
+                        </div>
+                        <h3 class="text-4xl md:text-5xl font-black mb-6 letter-tight leading-tight">
+                            Case Studies That <span class="text-primary">Convert</span>,<br>
+                            Not Just <span class="line-through text-gray-400">Bore</span>.
+                        </h3>
+                        <div class="service-stats mb-6">
+                            <div class="stat-item">
+                                <span class="stat-number">85%</span>
+                                <span class="stat-label">Lead Quality Increase</span>
+                            </div>
+                        </div>
+                        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
+                            We turn success stories into <span class="font-bold">cinematic explanations</span>.
+                        </p>
+                        <ul class="service-features">
+                            <li>✓ Clear breakdowns people actually finish</li>
+                            <li>✓ On-point editing</li>
+                            <li>✓ Visuals that trigger "I want this too"</li>
+                        </ul>
+                        <p class="text-base text-gray-600 mt-4 italic">
+                            Your wins get the spotlight they deserve.
+                        </p>
+                    </div>
+                    
+                    <!-- Performance Marketing Content -->
+                    <div class="service-content" data-service="performance-marketing">
+                        <div class="service-badge">
+                            <span class="badge-icon">💰</span>
+                            <span class="badge-text">REVENUE ENGINE</span>
+                        </div>
+                        <h3 class="text-4xl md:text-5xl font-black mb-6 letter-tight leading-tight">
+                            We Don't Run Ads.<br>
+                            We <span class="text-primary">Print Revenue</span>.
+                        </h3>
+                        <div class="service-stats mb-6">
+                            <div class="stat-item">
+                                <span class="stat-number">4.8x</span>
+                                <span class="stat-label">Avg ROAS</span>
+                            </div>
+                        </div>
+                        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
+                            Data. Psychology. Iteration. A little madness.
+                        </p>
+                        <ul class="service-features">
+                            <li>✓ Precision targeting that finds buyers</li>
+                            <li>✓ Killer creatives tested to perfection</li>
+                            <li>✓ Strategies that make rupees hustle harder</li>
+                        </ul>
+                        <p class="text-base text-gray-600 mt-4 italic">
+                            Marketing that actually performs.
+                        </p>
+                    </div>
+                    
+                    <!-- Studio Rental Content -->
+                    <div class="service-content" data-service="studio-rental">
+                        <div class="service-badge">
+                            <span class="badge-icon">🏢</span>
+                            <span class="badge-text">CREATIVE SPACE</span>
+                        </div>
+                        <h3 class="text-4xl md:text-5xl font-black mb-6 letter-tight leading-tight">
+                            A Studio That Makes<br>
+                            Your Creativity Feel <span class="highlight-underline">at Home</span>.
+                        </h3>
+                        <div class="service-stats mb-6">
+                            <div class="stat-item">
+                                <span class="stat-number">1500+</span>
+                                <span class="stat-label">Creator Hours</span>
+                            </div>
+                        </div>
+                        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
+                            Space designed for creators who demand better.
+                        </p>
+                        <ul class="service-features">
+                            <li>✓ Shoot content, record podcasts, film reels</li>
+                            <li>✓ Quiet. Aesthetic. Versatile.</li>
+                            <li>✓ Walk in with ideas, leave with content</li>
+                        </ul>
+                        <p class="text-base text-gray-600 mt-4 italic">
+                            Your next viral masterpiece starts here.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Right Side - Wooden Signpost -->
+                <div class="signpost-container">
+                    <div class="signpost-3d-wrapper">
+                        <!-- Bamboo/Wood Stick -->
+                        <div class="bamboo-stick"></div>
+                        
+                        <!-- Service Plates -->
+                        <div class="service-plates">
+                        <div class="service-plate active" data-service="podcasts">
+                            <div class="plate-dot"></div>
+                            <span class="plate-text">PODCASTS</span>
+                        </div>
+                        
+                        <div class="service-plate" data-service="reels">
+                            <div class="plate-dot"></div>
+                            <span class="plate-text">REELS</span>
+                        </div>
+                        
+                        <div class="service-plate" data-service="ad-shoots">
+                            <div class="plate-dot"></div>
+                            <span class="plate-text">AD SHOOTS</span>
+                        </div>
+                        
+                        <div class="service-plate" data-service="events">
+                            <div class="plate-dot"></div>
+                            <span class="plate-text">EVENTS</span>
+                        </div>
+                        
+                        <div class="service-plate" data-service="product-photography">
+                            <div class="plate-dot"></div>
+                            <span class="plate-text">PRODUCT PHOTOGRAPHY</span>
+                        </div>
+                        
+                        <div class="service-plate" data-service="case-studies">
+                            <div class="plate-dot"></div>
+                            <span class="plate-text">CASE STUDIES</span>
+                        </div>
+                        
+                        <div class="service-plate" data-service="performance-marketing">
+                            <div class="plate-dot"></div>
+                            <span class="plate-text">PERFORMANCE MARKETING</span>
+                        </div>
+                        
+                        <div class="service-plate" data-service="studio-rental">
+                            <div class="plate-dot"></div>
+                            <span class="plate-text">STUDIO RENTAL</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Old Services Grid (Hidden for now) -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" style="display: none;">
+                <!-- Service 1 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg scroll-animate">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Performance Marketing</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Campaigns optimized for conversions, not vanity metrics
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg scroll-animate delay-100">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Podcasting</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        From concept to distribution—audio that amplifies your voice
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg scroll-animate delay-200">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Social Media Management</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Content that cuts through the noise and builds community
+                    </p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg scroll-animate delay-300">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">AD Shoots</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        High-impact commercials that sell, not just tell
+                    </p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg scroll-animate">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Product Photography</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Visuals that make your products irresistible
+                    </p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg scroll-animate delay-100">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Edtech Course Creation</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Educational content that engages and educates
+                    </p>
+                </div>
+                
+                <!-- Service 7 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg scroll-animate delay-200">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">UGC & EGC Videos</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Authentic creator content that converts
+                    </p>
+                </div>
+                
+                <!-- Service 8 -->
+                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg scroll-animate delay-300">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Educational Videos</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Complex ideas, simplified and beautifully told
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Studio Section -->
+    <section id="studio" class="py-24 md:py-32 px-6 lg:px-12 bg-dark text-white relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-1/3 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/3 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+            <!-- Floating Logo Watermark -->
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 studio-logo-watermark opacity-5">
+                <img src="static/logo/whymedia-black-bg.png" alt="WhyMedia Logo" class="w-96 h-auto">
+            </div>
+        </div>
+        
+        <div class="max-w-container mx-auto relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-20 scroll-animate">
+                <div class="flex items-center justify-center gap-6 mb-8">
+                    <div class="h-px bg-gradient-to-r from-transparent via-primary to-transparent flex-1 max-w-32"></div>
+                    <img src="static/logo/whymedia-black-bg.png" alt="WhyMedia Logo" class="studio-header-logo h-16 md:h-20 lg:h-24 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300">
+                    <div class="h-px bg-gradient-to-l from-transparent via-primary to-transparent flex-1 max-w-32"></div>
+                </div>
+                <p class="handwritten text-3xl md:text-4xl lg:text-5xl text-gray-300 font-bold">
+                    Step inside our creative playground
+                </p>
+            </div>
+            
+            <!-- Creative Bento Box Grid Gallery -->
+            <div class="studio-bento-grid scroll-animate delay-200">
+                <!-- Large Featured Image (Spans 2 rows, 2 columns) - Main Production Floor -->
+                <div class="studio-item studio-item-large studio-item-featured" data-aos="fade-up">
+                    <div class="studio-image-wrapper">
+                        <img src="static/studio/DSC01642.JPG" alt="WhyMedia Studio - Main Space" class="studio-image" loading="lazy">
+                        <div class="studio-overlay">
+                            <div class="studio-overlay-content">
+                                <h3 class="studio-title">Main Production Floor</h3>
+                                <p class="studio-description">Where stories come to life</p>
+                            </div>
+                        </div>
+                        <div class="studio-corner-badge">Featured</div>
+                    </div>
+                </div>
+                
+                <!-- Tall Image (Spans 2 rows, 1 column) - Professional Gear -->
+                <div class="studio-item studio-item-tall" data-aos="fade-up" data-aos-delay="100">
+                    <div class="studio-image-wrapper">
+                        <img src="static/studio/DSC01643.JPG" alt="WhyMedia Studio - Equipment" class="studio-image" loading="lazy">
+                        <div class="studio-overlay">
+                            <div class="studio-overlay-content">
+                                <h3 class="studio-title">Professional Gear</h3>
+                                <p class="studio-description">State-of-the-art equipment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Wide Image (Spans 1 row, 2 columns) - Creative Corner -->
+                <div class="studio-item studio-item-wide" data-aos="fade-up" data-aos-delay="200">
+                    <div class="studio-image-wrapper">
+                        <img src="static/studio/DSC01644.JPG" alt="WhyMedia Studio - Creative Space" class="studio-image" loading="lazy">
+                        <div class="studio-overlay">
+                            <div class="studio-overlay-content">
+                                <h3 class="studio-title">Creative Corner</h3>
+                                <p class="studio-description">Collaboration meets innovation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Regular Square Image - Details Matter -->
+                <div class="studio-item studio-item-square" data-aos="fade-up" data-aos-delay="300">
+                    <div class="studio-image-wrapper">
+                        <img src="static/studio/DSC01642 (1).JPG" alt="WhyMedia Studio - Detail Shot" class="studio-image" loading="lazy">
+                        <div class="studio-overlay">
+                            <div class="studio-overlay-content">
+                                <h3 class="studio-title">Details Matter</h3>
+                                <p class="studio-description">Perfection in every frame</p>
+                            </div>
+                        </div>
+                        <div class="studio-shine-effect"></div>
+                    </div>
+                </div>
+                
+                <!-- Regular Square Image - Behind the Scenes -->
+                <div class="studio-item studio-item-square" data-aos="fade-up" data-aos-delay="400">
+                    <div class="studio-image-wrapper">
+                        <img src="static/studio/20250415_202409.jpg" alt="WhyMedia Studio - Behind the Scenes" class="studio-image" loading="lazy">
+                        <div class="studio-overlay">
+                            <div class="studio-overlay-content">
+                                <h3 class="studio-title">Behind the Scenes</h3>
+                                <p class="studio-description">Making the impossible, possible</p>
+                            </div>
+                        </div>
+                        <div class="studio-shine-effect"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Creative Photo Display - Masonry Style Row -->
+            <div class="studio-masonry-row mt-8 scroll-animate delay-500">
+                <div class="studio-masonry-item">
+                    <div class="studio-image-wrapper">
+                        <img src="static/studio/DSC01642.JPG" alt="WhyMedia Studio" class="studio-image" loading="lazy">
+                        <div class="studio-overlay">
+                            <div class="studio-overlay-content">
+                                <h3 class="studio-title">Production Excellence</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="studio-masonry-item">
+                    <div class="studio-image-wrapper">
+                        <img src="static/studio/DSC01643.JPG" alt="WhyMedia Studio" class="studio-image" loading="lazy">
+                        <div class="studio-overlay">
+                            <div class="studio-overlay-content">
+                                <h3 class="studio-title">Tech Innovation</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="studio-masonry-item">
+                    <div class="studio-image-wrapper">
+                        <img src="static/studio/DSC01644.JPG" alt="WhyMedia Studio" class="studio-image" loading="lazy">
+                        <div class="studio-overlay">
+                            <div class="studio-overlay-content">
+                                <h3 class="studio-title">Creative Space</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="studio-masonry-item">
+                    <div class="studio-image-wrapper">
+                        <img src="static/studio/DSC01642 (1).JPG" alt="WhyMedia Studio" class="studio-image" loading="lazy">
+                        <div class="studio-overlay">
+                            <div class="studio-overlay-content">
+                                <h3 class="studio-title">Precision Work</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="studio-masonry-item">
+                    <div class="studio-image-wrapper">
+                        <img src="static/studio/20250415_202409.jpg" alt="WhyMedia Studio" class="studio-image" loading="lazy">
+                        <div class="studio-overlay">
+                            <div class="studio-overlay-content">
+                                <h3 class="studio-title">Team Collaboration</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Below Gallery -->
+            <div class="text-center mt-16 scroll-animate delay-400">
+                <a href="#contact" class="inline-block px-10 py-5 bg-primary text-white text-lg font-bold rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
+                    Book a Studio Tour
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Results Section -->
+    <section class="py-24 md:py-32 px-6 lg:px-12 bg-gradient-to-b from-white to-gray-50">
+        <div class="max-w-container mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-20 scroll-animate max-w-5xl mx-auto">
+                <h2 class="text-6xl md:text-7xl lg:text-8xl font-black letter-tight mb-10 leading-[1.1]">
+                    We Deliver <span class="text-primary">Results</span>.<br>
+                    Not Just Promises.
+                </h2>
+                
+                <!-- New Compelling Copy -->
+                <div class="mt-6 space-y-4 text-left md:text-center">
+                    <p class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 leading-relaxed">
+                        I know you must have met many such so called <span class="text-primary">"Agencies"</span>
+                    </p>
+                    <p class="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-700 leading-relaxed">
+                        who have sold you only <span class="line-through text-gray-400">hype</span> and <span class="line-through text-gray-400">fake promises</span>.
+                    </p>
+                    <p class="text-2xl md:text-3xl lg:text-4xl font-bold text-dark leading-relaxed mt-4">
+                        we don't, we let our work speak on behalf of us.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Stats & Network Visualization -->
+            <div class="mt-12">
+                <!-- Ecosystem -->
+                <div class="scroll-animate">
+                    <h3 class="text-4xl md:text-5xl lg:text-6xl font-black text-dark text-center mb-8 md:mb-10">
+                        We have Built an <span class="bg-primary text-white px-6 py-3 inline-block transform -rotate-1 rounded-xl shadow-2xl">Ecosystem</span>
+                    </h3>
+                    
+                    
+                    <!-- Centered Ecosystem Diagram -->
+                    <div class="max-w-4xl mx-auto">
+                        <div class="ecosystem-diagram-wrapper">
+                            <div class="ecosystem-container" id="ecosystemDiagram">
+                                <!-- Connecting Lines -->
+                                <svg class="ecosystem-connections" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Lines from center to each node (perfect 72° distribution) -->
+                                    <line class="connection-line line-1" x1="400" y1="400" x2="400" y2="120" />
+                                    <line class="connection-line line-2" x1="400" y1="400" x2="666" y2="314" />
+                                    <line class="connection-line line-3" x1="400" y1="400" x2="565" y2="627" />
+                                    <line class="connection-line line-4" x1="400" y1="400" x2="235" y2="627" />
+                                    <line class="connection-line line-5" x1="400" y1="400" x2="134" y2="314" />
+                                    <circle class="orbit-ring" cx="400" cy="400" r="280" fill="none" />
+                                </svg>
+                                
+                                <!-- Center Circle -->
+                                <div class="eco-center">
+                                    <div class="eco-center-content">
+                                        <p class="eco-center-label">Our</p>
+                                        <h4 class="eco-center-title">Content<br>Ecosystem</h4>
+                                    </div>
+                                </div>
+                                
+                                <!-- Outer Circles -->
+                                <div class="eco-node eco-node-1" data-node="1">
+                                    <div class="eco-node-inner">
+                                        <div class="eco-icon">
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                                                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                                                <path d="M2 2l7.586 7.586"></path>
+                                            </svg>
+                                        </div>
+                                        <h5 class="eco-node-title">Crazy Script<br>Writers</h5>
+                                    </div>
+                                </div>
+                                
+                                <div class="eco-node eco-node-2" data-node="2">
+                                    <div class="eco-node-inner">
+                                        <div class="eco-icon">
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                                                <circle cx="12" cy="13" r="4"></circle>
+                                            </svg>
+                                        </div>
+                                        <h5 class="eco-node-title">Outstanding<br>Production Team</h5>
+                                    </div>
+                                </div>
+                                
+                                <div class="eco-node eco-node-3" data-node="3">
+                                    <div class="eco-node-inner">
+                                        <div class="eco-icon">
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="6" cy="6" r="3"></circle>
+                                                <circle cx="6" cy="18" r="3"></circle>
+                                                <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+                                                <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+                                                <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+                                            </svg>
+                                        </div>
+                                        <h5 class="eco-node-title">God-Level<br>Editing</h5>
+                                    </div>
+                                </div>
+                                
+                                <div class="eco-node eco-node-4" data-node="4">
+                                    <div class="eco-node-inner">
+                                        <div class="eco-icon">
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <circle cx="18" cy="5" r="3"></circle>
+                                                <circle cx="6" cy="12" r="3"></circle>
+                                                <circle cx="18" cy="19" r="3"></circle>
+                                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                                            </svg>
+                                        </div>
+                                        <h5 class="eco-node-title">Social Media<br>Optimization</h5>
+                                    </div>
+                                </div>
+                                
+                                <div class="eco-node eco-node-5" data-node="5">
+                                    <div class="eco-node-inner">
+                                        <div class="eco-icon">
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M3 11l18-5v12L3 14v-3z"></path>
+                                                <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path>
+                                            </svg>
+                                        </div>
+                                        <h5 class="eco-node-title">Massive Distribution<br>Network</h5>
+                                        <p class="eco-node-stats">2M+ Followers<br>50M+ Monthly Views</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Serious Clients Only Section -->
+    <section class="pt-12 md:pt-16 pb-24 md:pb-32 px-6 lg:px-12 bg-dark relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-container mx-auto relative z-10">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+                <!-- Left Side - Einstein Image -->
+                <div class="scroll-animate flex justify-center lg:justify-end">
+                    <div class="relative group">
+                        <div class="absolute -inset-6 bg-gradient-to-r from-primary to-red-600 rounded-3xl opacity-20 group-hover:opacity-40 blur-2xl transition-opacity duration-300"></div>
+                        <div class="relative bg-white p-3 rounded-3xl shadow-2xl transform group-hover:scale-105 group-hover:rotate-2 transition-all duration-300">
+                            <img src="static/images/einstein.jpg" loading="lazy" 
+                                 alt="Einstein - Only for serious minds" 
+                                 class="w-full h-auto rounded-2xl"
+                                 style="max-width: 500px; min-width: 350px; filter: grayscale(100%) contrast(1.1);">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Side - Text -->
+                <div class="scroll-animate delay-200">
+                    <div class="space-y-6 lg:pl-4">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+                            We <span class="text-primary">Don't</span> Work<br>
+                            With Everyone.
+                        </h2>
+                        
+                        <div class="h-1 w-24 bg-gradient-to-r from-primary to-red-600 rounded-full"></div>
+                        
+                        <p class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-300 leading-relaxed">
+                            We work with only clients who are 
+                            <span class="text-primary font-black">so damn serious</span> 
+                            about creating 
+                            <span class="relative inline-block">
+                                <span class="relative z-10 text-white font-black">world class</span>
+                                <span class="absolute bottom-0 left-0 w-full h-3 bg-primary/30 transform -skew-x-12"></span>
+                            </span>
+                            online presence.
+                        </p>
+                        
+                        <div class="pt-8">
+                            <a href="#contact" class="inline-block px-8 py-4 bg-primary text-white text-lg font-black rounded-lg hover:bg-red-600 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl">
+                                Are You Serious? Let's Talk →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Clients Section -->
+    <section class="py-24 md:py-32 px-6 lg:px-12 bg-dark text-white">
+        <div class="max-w-container mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16 scroll-animate">
+                <h2 class="text-5xl md:text-7xl lg:text-8xl font-black letter-tight mb-6">
+                    Trusted by <span class="text-primary">Industry Leaders</span><br>
+                    and <span class="text-primary">50+</span> brands
+                </h2>
+                <p class="handwritten text-3xl md:text-4xl lg:text-5xl text-gray-300 font-bold">
+                    And we're just getting started.
+                </p>
+            </div>
+            
+            <!-- First Brand Scroll -->
+            <div class="brands-scroll-container mb-16 scroll-animate delay-200">
+                <div class="brands-scroll-track">
+                    <div class="brands-scroll-content">
+                        <div class="brand-logo-wrapper"><img src="static/brands/Algorithm 365.png" alt="Algorithm 365" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/flexype-logo.svg" alt="Flexype" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/Picxele.jpg" alt="Picxele" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/Startups Manch.png" alt="Startups Manch" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/TradomateOneLogo (1).jpg" alt="Tradomate" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/TransBnk new Logo (1).jpg" alt="TransBnk" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/bluSwap-FineX_512x512.png" alt="bluSwap FineX" class="brand-logo-img" loading="lazy"></div>
+                    </div>
+                    <div class="brands-scroll-content" aria-hidden="true">
+                        <!-- Duplicate for seamless loop -->
+                        <div class="brand-logo-wrapper"><img src="static/brands/Algorithm 365.png" alt="Algorithm 365" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/flexype-logo.svg" alt="Flexype" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/Picxele.jpg" alt="Picxele" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/Startups Manch.png" alt="Startups Manch" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/TradomateOneLogo (1).jpg" alt="Tradomate" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/TransBnk new Logo (1).jpg" alt="TransBnk" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/bluSwap-FineX_512x512.png" alt="bluSwap FineX" class="brand-logo-img" loading="lazy"></div>
+                        </div>
+                    </div>
+                </div>
+                
+            <!-- Leaders Profile Section -->
+            <div class="leaders-container scroll-animate delay-400">
+                <div class="leaders-row">
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <img src="static/images/leaders/nishant.png" alt="Nishant">
+                        </div>
+                        <div class="leader-info">
+                            <h4 class="leader-name">Nishant</h4>
+                            <p class="leader-company">Founder & CEO</p>
+                    </div>
+                </div>
+                
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <img src="static/images/leaders/rishav.png" alt="Rishav">
+                        </div>
+                        <div class="leader-info">
+                            <h4 class="leader-name">Rishav</h4>
+                            <p class="leader-company">Co-Founder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Second Brand Scroll -->
+            <div class="brands-scroll-container mt-16 scroll-animate delay-600">
+                <div class="brands-scroll-track brands-scroll-reverse">
+                    <div class="brands-scroll-content">
+                        <div class="brand-logo-wrapper"><img src="static/brands/gm-logo.jpg" alt="GM" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/hashfame_logo.jpeg" alt="Hashfame" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/karostartup.png" alt="Karo Startup" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/logo.png" alt="Brand Logo" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/siemens.png" alt="Siemens" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/thegoodkind.png" alt="The Good Kind" class="brand-logo-img" loading="lazy"></div>
+                    </div>
+                    <div class="brands-scroll-content" aria-hidden="true">
+                        <div class="brand-logo-wrapper"><img src="static/brands/gm-logo.jpg" alt="GM" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/hashfame_logo.jpeg" alt="Hashfame" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/karostartup.png" alt="Karo Startup" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/logo.png" alt="Brand Logo" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/siemens.png" alt="Siemens" class="brand-logo-img" loading="lazy"></div>
+                        <div class="brand-logo-wrapper"><img src="static/brands/thegoodkind.png" alt="The Good Kind" class="brand-logo-img" loading="lazy"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA Section -->
+    <section id="contact" class="py-24 md:py-32 px-6 lg:px-12 bg-dark text-white relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute -top-1/2 -right-1/2 w-full h-full bg-primary/10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-1/2 -left-1/2 w-full h-full bg-primary/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="text-5xl md:text-7xl font-black letter-tight mb-8 scroll-animate">
+                Ready to Stop Talking<br>
+                and Start <span class="text-primary">Growing</span>?
+            </h2>
+            
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 scroll-animate delay-200">
+                Let's create campaigns that actually move the needle.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 scroll-animate delay-400">
+                <a href="mailto:rohanghorpade@whymedia.in" class="btn-hover px-8 py-4 bg-primary text-white text-lg font-semibold rounded-lg">
+                    Start Your Campaign
+                </a>
+                <a href="#services" class="px-8 py-4 border-2 border-white/30 text-white text-lg font-semibold rounded-lg hover:border-primary transition-colors duration-300">
+                    View Our Services
+                </a>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="mt-16 pt-16 border-t border-white/10 grid md:grid-cols-3 gap-8 text-left scroll-animate delay-600">
+                <div>
+                    <h3 class="font-bold mb-2 text-primary">Email</h3>
+                    <a href="mailto:rohanghorpade@whymedia.in" class="text-gray-300 hover:text-white transition-colors">
+                        rohanghorpade@whymedia.in
+                    </a>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-2 text-primary">Phone</h3>
+                    <a href="tel:+919035460096" class="text-gray-300 hover:text-white transition-colors">
+                        +91 90354 60096
+                    </a>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-2 text-primary">Location</h3>
+                    <p class="text-gray-300">
+                        WhyMedia Creative Studio, 3rd floor, 17th Cross Rd, opp. Allen Solly, Sector 6, HSR Layout, Bengaluru, Karnataka 560102
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12 px-6 lg:px-12 border-t border-white/10">
+        <div class="max-w-container mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div>
+                    <div class="mb-4">
+                        <a href="#" class="inline-block">
+                            <img src="static/logo/WhyMedia.png" alt="WhyMedia Logo" class="footer-logo h-12 md:h-16 w-auto hover:opacity-80 transition-opacity duration-300">
+                        </a>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Creative production house that delivers results.
+                    </p>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Performance Marketing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Social Media</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Production</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Education</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/whymedia.in?igsh=MXR5Z3hqemFmNzR6Mg==" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://youtube.com/@whymediastudio?si=ng8Ww1LCOIkvNFwk" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/why-media-studio/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="pt-8 border-t border-white/10 text-center text-gray-400 text-sm">
+                <p>© 2025 WhyMedia. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="static/js/script.js"></script>
+</body>
+</html>
+
