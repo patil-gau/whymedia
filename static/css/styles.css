@@ -1441,6 +1441,7 @@ body {
     .signpost-container {
         min-height: 450px;
         padding: 2rem 0;
+        display: none;
     }
     
     .service-plate {
@@ -2498,15 +2499,16 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     background: linear-gradient(135deg, #FF3333 0%, #DC2626 50%, #B91C1C 100%);
     box-shadow: 
-        0 15px 45px rgba(255, 51, 51, 0.35),
-        0 6px 15px rgba(0, 0, 0, 0.18),
-        inset 0 2px 0 rgba(255, 255, 255, 0.2),
-        0 0 0 6px rgba(255, 51, 51, 0.12);
+        0 25px 70px rgba(255, 51, 51, 0.5),
+        0 10px 25px rgba(255, 51, 51, 0.3),
+        inset 0 2px 0 rgba(255, 255, 255, 0.3),
+        0 0 0 8px rgba(255, 51, 51, 0.3),
+        0 0 50px rgba(255, 51, 51, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2527,11 +2529,11 @@ body {
     transform: translate(-50%, -50%) scale(1.08);
     z-index: 100;
     box-shadow: 
-        0 25px 70px rgba(255, 51, 51, 0.5),
-        0 10px 25px rgba(255, 51, 51, 0.3),
-        inset 0 2px 0 rgba(255, 255, 255, 0.3),
-        0 0 0 8px rgba(255, 51, 51, 0.3),
-        0 0 50px rgba(255, 51, 51, 0.3);
+        0 30px 80px rgba(255, 51, 51, 0.6),
+        0 15px 35px rgba(255, 51, 51, 0.4),
+        inset 0 2px 0 rgba(255, 255, 255, 0.4),
+        0 0 0 10px rgba(255, 51, 51, 0.4),
+        0 0 60px rgba(255, 51, 51, 0.4);
 }
 
 .eco-center-content {
@@ -2549,7 +2551,7 @@ body {
 }
 
 .eco-center-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 900;
     line-height: 1.2;
     letter-spacing: -0.01em;
@@ -2558,8 +2560,8 @@ body {
 /* Outer Nodes - FIXED Z-INDEX */
 .eco-node {
     position: absolute;
-    width: 110px;
-    height: 110px;
+    width: 130px;
+    height: 130px;
     opacity: 0;
     transform: scale(0.8);
     transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -2624,13 +2626,15 @@ body {
     justify-content: center;
     text-align: center;
     box-shadow: 
-        0 8px 30px rgba(0, 0, 0, 0.1),
-        0 3px 10px rgba(0, 0, 0, 0.06),
-        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+        0 8px 30px rgba(0, 0, 0, 0.25),
+        0 3px 10px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        0 0 0 3px rgba(0, 0, 0, 0.2),
+        0 0 25px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: all 0.3s ease;
     background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 50%, #D1D5DB 100%);
-    border: 2px solid #E5E7EB;
+    border: 2px solid rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 50;
 }
@@ -2638,11 +2642,13 @@ body {
 .eco-node:hover .eco-node-inner {
     transform: scale(1.08);
     background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 50%, #E5E7EB 100%);
-    border-color: #D1D5DB;
+    border-color: rgba(0, 0, 0, 0.5);
     box-shadow: 
-        0 15px 45px rgba(0, 0, 0, 0.15),
-        0 6px 15px rgba(0, 0, 0, 0.1),
-        inset 0 2px 0 rgba(255, 255, 255, 0.5);
+        0 15px 45px rgba(0, 0, 0, 0.35),
+        0 6px 15px rgba(0, 0, 0, 0.25),
+        inset 0 2px 0 rgba(255, 255, 255, 0.5),
+        0 0 0 4px rgba(0, 0, 0, 0.3),
+        0 0 35px rgba(0, 0, 0, 0.3);
     z-index: 50;
 }
 
