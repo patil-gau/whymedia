@@ -630,4 +630,82 @@ if (document.readyState === 'loading') {
     initStudioMasonry();
 }
 
+// Scroll Word-by-Word Animation for Results Section
+function initScrollWordAnimation() {
+    const resultsSection = document.getElementById('results-section');
+    const scrollWords = resultsSection?.querySelectorAll('.scroll-word');
+    
+    console.log('Initializing scroll word animation...');
+    console.log('Results section:', resultsSection);
+    console.log('Scroll words found:', scrollWords?.length);
+    
+    if (!resultsSection || !scrollWords || scrollWords.length === 0) {
+        console.log('Missing elements for scroll word animation');
+        return;
+    }
+    
+    const totalWords = scrollWords.length;
+    
+    console.log('Total words to animate:', totalWords);
+    
+    // Calculate scroll progress through the section
+    function updateScrollWords() {
+        const rect = resultsSection.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        
+        // Start animating when section is in middle of viewport
+        // Progress from 0 to 1 as section moves through viewport
+        let progress = 0;
+        
+        if (rect.top < viewportHeight * 0.7 && rect.bottom > viewportHeight * 0.3) {
+            // Calculate progress based on how far into the viewport the section is
+            const sectionMidpoint = rect.top + rect.height / 2;
+            const viewportMidpoint = viewportHeight / 2;
+            const distanceFromCenter = viewportMidpoint - sectionMidpoint;
+            const maxDistance = viewportHeight * 0.4;
+            
+            progress = Math.max(0, Math.min(1, (maxDistance + distanceFromCenter) / (maxDistance * 2)));
+        } else if (rect.top < viewportHeight * 0.3) {
+            progress = 1;
+        }
+        
+        // Calculate how many words should be active based on scroll progress
+        const activeWordCount = Math.floor(progress * (totalWords + 1));
+        
+        // Activate words one by one
+        scrollWords.forEach((word, index) => {
+            if (index < activeWordCount) {
+                word.classList.add('active');
+            } else {
+                word.classList.remove('active');
+            }
+        });
+    }
+    
+    // Throttle scroll events for better performance
+    let ticking = false;
+    function handleScroll() {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                updateScrollWords();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    // Initial check
+    updateScrollWords();
+    
+    console.log('Scroll word animation initialized successfully');
+}
+
+// Initialize scroll word animation
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initScrollWordAnimation);
+} else {
+    initScrollWordAnimation();
+}
 
