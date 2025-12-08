@@ -283,6 +283,48 @@ let categoryVideos = [];
 let scrollTimeout = null;
 let isScrolling = false;
 
+// ============================================
+// Video Pause Management - Pause all videos on scroll/click/switch
+// ============================================
+
+// Function to pause all YouTube iframes
+function pauseAllVideos() {
+    const iframes = document.querySelectorAll('iframe[src*="youtube"]');
+    iframes.forEach(iframe => {
+        try {
+            // Send pause command using YouTube's postMessage API
+            iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        } catch (e) {
+            // Fallback: reload the iframe src to stop the video
+            // This is less elegant but works as a fallback
+        }
+    });
+}
+
+// Pause videos on scroll
+let scrollPauseTimeout = null;
+window.addEventListener('scroll', () => {
+    // Debounce to avoid too many calls
+    if (scrollPauseTimeout) clearTimeout(scrollPauseTimeout);
+    scrollPauseTimeout = setTimeout(() => {
+        pauseAllVideos();
+    }, 150);
+}, { passive: true });
+
+// Pause videos on click anywhere (except on iframe itself)
+document.addEventListener('click', (e) => {
+    // Don't pause if clicking on the iframe or its container
+    if (e.target.tagName === 'IFRAME' || e.target.closest('.work-video-item')) {
+        return;
+    }
+    pauseAllVideos();
+}, { passive: true });
+
+// Pause videos when switching categories or videos
+function pauseOnVideoSwitch() {
+    pauseAllVideos();
+}
+
 // Initialize work section
 function initWorkSection() {
     // Update video items for current category
@@ -361,6 +403,9 @@ function updateNavigationDots() {
 }
 
 function switchCategory(newCategory) {
+    // Pause all videos before switching category
+    pauseAllVideos();
+    
     currentCategory = newCategory;
     currentVideoIndex = 0;
     
@@ -381,6 +426,9 @@ function switchCategory(newCategory) {
 
 function showVideo(index) {
     if (index < 0 || index >= categoryVideos.length) return;
+    
+    // Pause all videos before switching
+    pauseAllVideos();
     
     currentVideoIndex = index;
     

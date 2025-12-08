@@ -63,14 +63,13 @@
     </div>
     
     <!-- Navigation -->
-    <nav class="absolute top-0 w-full z-50">
-        <div class="max-w-container mx-auto px-6 lg:px-12 pt-2 pb-0 flex items-center justify-between">
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+        <div class="max-w-container mx-auto px-4 sm:px-6 lg:px-12 py-2 flex items-center justify-between">
             <!-- Logo -->
             <a href="#" class="flex items-center group">
                 <img src="static/logo/WhyMedia.png" 
                      alt="WhyMedia - Creative Production House" 
-                     style="width: 250px; height: 150px; min-width: 250px; min-height: 150px;"
-                     class="transition-transform duration-300 group-hover:scale-105">
+                     class="logo-nav transition-transform duration-300 group-hover:scale-105">
             </a>
             
             <!-- Desktop Navigation -->
@@ -111,7 +110,7 @@
     </div>
     
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center px-6 lg:px-12 pt-20 relative overflow-hidden">
+    <section class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-12 pt-32 md:pt-20 relative overflow-hidden">
         <!-- Background Animation Elements -->
         <div class="absolute inset-0 overflow-hidden pointer-events-none">
             <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse-slow"></div>
@@ -119,12 +118,12 @@
         </div>
         
         <div class="max-w-container mx-auto w-full text-center relative z-10">
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black letter-tight mb-8 opacity-0 animate-fade-in-up leading-[1.1] md:leading-[1.1] lg:leading-[1.1] hero-bold">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black letter-tight mb-6 sm:mb-8 opacity-0 animate-fade-in-up leading-[1.1] hero-bold">
                 <span class="text-primary block">If It Doesn't Freeze Time,</span>
-                <span class="block mt-3 md:mt-4 lg:mt-5">It Never Left Our Studio</span>
+                <span class="block mt-2 sm:mt-3 md:mt-4 lg:mt-5">It Never Left Our Studio</span>
             </h1>
             
-            <p class="handwritten text-3xl md:text-4xl lg:text-5xl text-dark font-bold max-w-3xl mx-auto mb-8 opacity-0 animate-fade-in-up delay-200">
+            <p class="handwritten text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-dark font-bold max-w-3xl mx-auto mb-6 sm:mb-8 opacity-0 animate-fade-in-up delay-200">
                 Explore the Stories That Froze Time
             </p>
             
@@ -141,40 +140,40 @@
     </section>
     
     <!-- Manifesto Section -->
-    <section id="about" class="py-24 md:py-32 px-6 lg:px-12 bg-dark text-white puzzle-section relative overflow-hidden">
+    <section id="about" class="py-16 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-12 bg-dark text-white puzzle-section relative overflow-hidden">
         <div class="max-w-container mx-auto">
             <div class="max-w-5xl mx-auto">
                 <!-- Top Heading -->
-                <div class="mb-12 scroll-animate">
-                    <p class="handwritten text-3xl md:text-4xl lg:text-5xl text-white font-bold mb-6">
+                <div class="mb-8 sm:mb-12 scroll-animate">
+                    <p class="handwritten text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-bold mb-4 sm:mb-6">
                         Not just another production studio in Bangalore but..
                     </p>
                 </div>
                 
                 <!-- Main Copy with Puzzle Words -->
-                <div class="mb-16 scroll-animate delay-200">
-                    <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-8" style="line-height: 1.4;">
+                <div class="mb-12 sm:mb-16 scroll-animate delay-200">
+                    <h2 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8" style="line-height: 1.4;">
                         We're <span class="puzzle-word text-white">master time-freezers</span> <span class="text-gray-400">(capturing moments that matter)</span> creating <span class="puzzle-word text-white">visual stories</span> that <span class="puzzle-word text-white">stop your audience</span> mid-scroll <span class="text-gray-400">(and make them hit replay)</span>
                     </h2>
                 </div>
                 
                 <!-- Mission Statement with Puzzle Words -->
                 <div class="scroll-animate delay-300">
-                    <h3 class="text-xl md:text-2xl font-bold mb-6" style="line-height: 1.5;">
+                    <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-4 sm:mb-6" style="line-height: 1.5;">
                         Our mission is <span class="puzzle-word text-white">crystal clear:</span>
                     </h3>
-                    <p class="text-base md:text-lg text-gray-400 max-w-3xl" style="line-height: 1.8;">
+                    <p class="text-sm sm:text-base md:text-lg text-gray-400 max-w-3xl" style="line-height: 1.8;">
                         We don't just capture footage—we <span class="puzzle-word text-white">freeze moments in time</span> that tell your brand's story. Every <span class="puzzle-word text-white">frame</span>, every <span class="puzzle-word text-white">second</span>, every <span class="puzzle-word text-white">shot</span> is crafted to <span class="puzzle-word text-white">make time stand still</span> and your message <span class="puzzle-word text-white">unforgettable</span>.
                     </p>
                 </div>
             </div>
             
             <!-- Full Width Video Embed -->
-            <div class="mt-16 scroll-animate delay-400">
+            <div class="mt-12 sm:mt-16 scroll-animate delay-400">
                 <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; box-shadow: 0 20px 60px rgba(255, 51, 51, 0.3);">
                     <iframe 
                         class="absolute top-0 left-0 w-full h-full"
-                        src="https://www.youtube.com/embed/3ClUzV4gQ3U?rel=0&modestbranding=1" 
+                        src="https://www.youtube.com/embed/3ClUzV4gQ3U?rel=0&modestbranding=1&enablejsapi=1" 
                         title="WhyMedia Showcase" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -271,8 +270,8 @@
                                 <div class="work-video-item active" data-category="podcasts" data-video-index="0">
                                     <div class="aspect-video bg-black rounded-2xl overflow-hidden">
                                         <iframe 
-                                            class="w-full h-full" 
-                                            src="https://www.youtube.com/embed/V95ZDJAZ5XY" 
+                                            class="w-full h-full portfolio-video" 
+                                            src="https://www.youtube.com/embed/V95ZDJAZ5XY?enablejsapi=1" 
                                             title="Podcast 1" 
                                             frameborder="0" 
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -284,8 +283,8 @@
                                 <div class="work-video-item" data-category="podcasts" data-video-index="1">
                                     <div class="aspect-video bg-black rounded-2xl overflow-hidden">
                                         <iframe 
-                                            class="w-full h-full" 
-                                            src="https://www.youtube.com/embed/_p1tzApWuzM" 
+                                            class="w-full h-full portfolio-video" 
+                                            src="https://www.youtube.com/embed/_p1tzApWuzM?enablejsapi=1" 
                                             title="Podcast 2" 
                                             frameborder="0" 
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -297,8 +296,8 @@
                                 <div class="work-video-item" data-category="podcasts" data-video-index="2">
                                     <div class="aspect-video bg-black rounded-2xl overflow-hidden">
                                         <iframe 
-                                            class="w-full h-full" 
-                                            src="https://www.youtube.com/embed/MA0NrYu1iCY" 
+                                            class="w-full h-full portfolio-video" 
+                                            src="https://www.youtube.com/embed/MA0NrYu1iCY?enablejsapi=1" 
                                             title="Podcast 3" 
                                             frameborder="0" 
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -312,8 +311,8 @@
                                     <div class="max-w-md mx-auto" style="width: 100%; max-width: 350px;">
                                         <div class="relative bg-black rounded-2xl" style="width: 100%; height: 0; padding-bottom: 177.78%; overflow: hidden;">
                                             <iframe 
-                                                class="absolute top-0 left-0 w-full h-full rounded-2xl" 
-                                                src="https://www.youtube.com/embed/JMXi0D8-qBE" 
+                                                class="absolute top-0 left-0 w-full h-full rounded-2xl portfolio-video" 
+                                                src="https://www.youtube.com/embed/JMXi0D8-qBE?enablejsapi=1" 
                                                 title="Reel" 
                                                 frameborder="0" 
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -328,8 +327,8 @@
                                     <div class="max-w-md mx-auto" style="width: 100%; max-width: 350px;">
                                         <div class="relative bg-black rounded-2xl" style="width: 100%; height: 0; padding-bottom: 177.78%; overflow: hidden;">
                                             <iframe 
-                                                class="absolute top-0 left-0 w-full h-full rounded-2xl" 
-                                                src="https://www.youtube.com/embed/JMXi0D8-qBE" 
+                                                class="absolute top-0 left-0 w-full h-full rounded-2xl portfolio-video" 
+                                                src="https://www.youtube.com/embed/emxloXnaJKc?enablejsapi=1" 
                                                 title="Reel" 
                                                 frameborder="0" 
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -345,8 +344,8 @@
                                     <div class="max-w-md mx-auto" style="width: 100%; max-width: 350px;">
                                         <div class="relative bg-black rounded-2xl" style="width: 100%; height: 0; padding-bottom: 177.78%; overflow: hidden;">
                                             <iframe 
-                                                class="absolute top-0 left-0 w-full h-full rounded-2xl" 
-                                                src="https://www.youtube.com/embed/mMR4eXS3cBs" 
+                                                class="absolute top-0 left-0 w-full h-full rounded-2xl portfolio-video" 
+                                                src="https://www.youtube.com/embed/mMR4eXS3cBs?enablejsapi=1" 
                                                 title="Vox Pop Reel 1" 
                                                 frameborder="0" 
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -361,8 +360,8 @@
                                     <div class="max-w-md mx-auto" style="width: 100%; max-width: 350px;">
                                         <div class="relative bg-black rounded-2xl" style="width: 100%; height: 0; padding-bottom: 177.78%; overflow: hidden;">
                                             <iframe 
-                                                class="absolute top-0 left-0 w-full h-full rounded-2xl" 
-                                                src="https://www.youtube.com/embed/pUn-X2tt1OQ" 
+                                                class="absolute top-0 left-0 w-full h-full rounded-2xl portfolio-video" 
+                                                src="https://www.youtube.com/embed/pUn-X2tt1OQ?enablejsapi=1" 
                                                 title="Vox Pop Reel 2" 
                                                 frameborder="0" 
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -378,8 +377,8 @@
                                     <div class="max-w-md mx-auto" style="width: 100%; max-width: 350px;">
                                         <div class="relative bg-black rounded-2xl" style="width: 100%; height: 0; padding-bottom: 177.78%; overflow: hidden;">
                                             <iframe 
-                                                class="absolute top-0 left-0 w-full h-full rounded-2xl" 
-                                                src="https://www.youtube.com/embed/pQCDm0tgJlE" 
+                                                class="absolute top-0 left-0 w-full h-full rounded-2xl portfolio-video" 
+                                                src="https://www.youtube.com/embed/pQCDm0tgJlE?enablejsapi=1" 
                                                 title="Talking Head Reel 1" 
                                                 frameborder="0" 
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -394,8 +393,8 @@
                                     <div class="max-w-md mx-auto" style="width: 100%; max-width: 350px;">
                                         <div class="relative bg-black rounded-2xl" style="width: 100%; height: 0; padding-bottom: 177.78%; overflow: hidden;">
                                             <iframe 
-                                                class="absolute top-0 left-0 w-full h-full rounded-2xl" 
-                                                src="https://www.youtube.com/embed/7URPtNcsq1k" 
+                                                class="absolute top-0 left-0 w-full h-full rounded-2xl portfolio-video" 
+                                                src="https://www.youtube.com/embed/7URPtNcsq1k?enablejsapi=1" 
                                                 title="Talking Head Reel 2" 
                                                 frameborder="0" 
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -411,8 +410,8 @@
                                     <div class="max-w-md mx-auto" style="width: 100%; max-width: 350px;">
                                         <div class="relative bg-black rounded-2xl" style="width: 100%; height: 0; padding-bottom: 177.78%; overflow: hidden;">
                                             <iframe 
-                                                class="absolute top-0 left-0 w-full h-full rounded-2xl" 
-                                                src="https://www.youtube.com/embed/GPL_aWA7yOA" 
+                                                class="absolute top-0 left-0 w-full h-full rounded-2xl portfolio-video" 
+                                                src="https://www.youtube.com/embed/GPL_aWA7yOA?enablejsapi=1" 
                                                 title="UGC Reel 1" 
                                                 frameborder="0" 
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -427,8 +426,8 @@
                                     <div class="max-w-md mx-auto" style="width: 100%; max-width: 350px;">
                                         <div class="relative bg-black rounded-2xl" style="width: 100%; height: 0; padding-bottom: 177.78%; overflow: hidden;">
                                             <iframe 
-                                                class="absolute top-0 left-0 w-full h-full rounded-2xl" 
-                                                src="https://www.youtube.com/embed/lFWHH2zkaMs" 
+                                                class="absolute top-0 left-0 w-full h-full rounded-2xl portfolio-video" 
+                                                src="https://www.youtube.com/embed/lFWHH2zkaMs?enablejsapi=1" 
                                                 title="UGC Reel 2" 
                                                 frameborder="0" 
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -443,8 +442,8 @@
                                 <div class="work-video-item" data-category="corporate-films" data-video-index="0">
                                     <div class="aspect-video bg-black rounded-2xl overflow-hidden">
                                         <iframe 
-                                            class="w-full h-full" 
-                                            src="https://www.youtube.com/embed/cjsUsuKXBFA" 
+                                            class="w-full h-full portfolio-video" 
+                                            src="https://www.youtube.com/embed/cjsUsuKXBFA?enablejsapi=1" 
                                             title="Corporate Film 1" 
                                             frameborder="0" 
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -456,8 +455,8 @@
                                 <div class="work-video-item" data-category="corporate-films" data-video-index="1">
                                     <div class="aspect-video bg-black rounded-2xl overflow-hidden">
                                         <iframe 
-                                            class="w-full h-full" 
-                                            src="https://www.youtube.com/embed/IZN1QJgPFfg" 
+                                            class="w-full h-full portfolio-video" 
+                                            src="https://www.youtube.com/embed/IZN1QJgPFfg?enablejsapi=1" 
                                             title="Corporate Film 2" 
                                             frameborder="0" 
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -469,8 +468,8 @@
                                 <div class="work-video-item" data-category="corporate-films" data-video-index="2">
                                     <div class="aspect-video bg-black rounded-2xl overflow-hidden">
                                         <iframe 
-                                            class="w-full h-full" 
-                                            src="https://www.youtube.com/embed/T33H56vgrwo" 
+                                            class="w-full h-full portfolio-video" 
+                                            src="https://www.youtube.com/embed/T33H56vgrwo?enablejsapi=1" 
                                             title="Corporate Film 3" 
                                             frameborder="0" 
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -484,8 +483,8 @@
                                     <div class="max-w-md mx-auto" style="width: 100%; max-width: 350px;">
                                         <div class="relative bg-black rounded-2xl" style="width: 100%; height: 0; padding-bottom: 177.78%; overflow: hidden;">
                                             <iframe 
-                                                class="absolute top-0 left-0 w-full h-full rounded-2xl" 
-                                                src="https://www.youtube.com/embed/9P_C6JoU-qk" 
+                                                class="absolute top-0 left-0 w-full h-full rounded-2xl portfolio-video" 
+                                                src="https://www.youtube.com/embed/9P_C6JoU-qk?enablejsapi=1" 
                                                 title="Product Shoot 1" 
                                                 frameborder="0" 
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -500,8 +499,8 @@
                                     <div class="max-w-md mx-auto" style="width: 100%; max-width: 350px;">
                                         <div class="relative bg-black rounded-2xl" style="width: 100%; height: 0; padding-bottom: 177.78%; overflow: hidden;">
                                             <iframe 
-                                                class="absolute top-0 left-0 w-full h-full rounded-2xl" 
-                                                src="https://www.youtube.com/embed/p9uQG1BM0Zs" 
+                                                class="absolute top-0 left-0 w-full h-full rounded-2xl portfolio-video" 
+                                                src="https://www.youtube.com/embed/p9uQG1BM0Zs?enablejsapi=1" 
                                                 title="Product Shoot 2" 
                                                 frameborder="0" 
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -517,7 +516,7 @@
                                         <div class="relative bg-black rounded-2xl" style="width: 100%; height: 0; padding-bottom: 177.78%; overflow: hidden;">
                                             <iframe 
                                                 class="absolute top-0 left-0 w-full h-full rounded-2xl" 
-                                                src="https://www.youtube.com/embed/LlySxZNFEwM" 
+                                                src="https://www.youtube.com/embed/LlySxZNFEwM?enablejsapi=1" 
                                                 title="Product Shoot 3" 
                                                 frameborder="0" 
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -533,7 +532,7 @@
                                     <div class="aspect-video bg-black rounded-2xl overflow-hidden">
                                         <iframe 
                                             class="w-full h-full" 
-                                            src="https://www.youtube.com/embed/r4dzWsvhK9E" 
+                                            src="https://www.youtube.com/embed/r4dzWsvhK9E?enablejsapi=1" 
                                             title="Case Study" 
                                             frameborder="0" 
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -705,6 +704,18 @@
                             <p class="leader-company">Cofounder, Tradomate</p>
                         </div>
                     </div>
+                    
+                    <!-- More Leaders Card -->
+                    <div class="leader-card">
+                        <div class="leader-image more-leaders-circle">
+                            <span class="more-leaders-number">30+</span>
+                            <span class="more-leaders-text">more leaders</span>
+                        </div>
+                        <div class="leader-info">
+                            <h4 class="leader-name">And Many More</h4>
+                            <p class="leader-company">Industry Leaders</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -733,10 +744,10 @@
     </section>
     
     <!-- Services Section -->
-    <section id="services" class="pt-12 pb-24 md:pt-16 md:pb-32 px-6 lg:px-12 bg-gray-50">
+    <section id="services" class="pt-12 pb-8 md:pt-16 md:pb-24 lg:pb-32 px-6 lg:px-12 bg-gray-50">
         <div class="max-w-container mx-auto">
             <!-- Section Header with Large Static Text -->
-            <div class="mb-16 scroll-animate">
+            <div class="mb-8 md:mb-16 scroll-animate">
                 <!-- Large Static Text -->
                 <div class="text-center">
                     <h2 class="services-big-title">
@@ -751,7 +762,7 @@
             </div>
             
             <!-- Services Content with Signpost -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 lg:gap-16 items-start">
                 <!-- Right Side - Wooden Signpost (Shown First on Mobile) -->
                 <div class="signpost-container order-1 lg:order-2">
                     <div class="signpost-3d-wrapper">
@@ -772,7 +783,7 @@
                         
                         <div class="service-plate" data-service="ad-shoots">
                             <div class="plate-dot"></div>
-                            <span class="plate-text">AD SHOOTS</span>
+                            <span class="plate-text">ADVERTISEMENT SHOOTS</span>
                         </div>
                         
                         <div class="service-plate" data-service="events">
@@ -798,174 +809,229 @@
                     <!-- Podcasts Content -->
                     <div class="service-content active" data-service="podcasts">
                         <div class="service-badge">
-                            <span class="badge-icon">🎙️</span>
-                            <span class="badge-text">AUDIO MAGIC</span>
+                            <span class="badge-text">PODCASTS</span>
                         </div>
-                        <h3 class="text-4xl md:text-5xl font-black mb-6 letter-tight leading-tight">
-                            Your Voice, <span class="text-primary">Amplified</span>.<br>
-                            Your Story, <span class="highlight-underline">Immortalized</span>.
+                        <h3 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4 letter-tight leading-tight text-gray-900">
+                            Amplify Your Voice,<br>
+                            <span class="text-primary">Immortalize Your Story</span>
                         </h3>
-                        <div class="service-stats mb-6">
-                            <div class="stat-item">
-                                <span class="stat-number">10K+</span>
-                                <span class="stat-label">Hours Produced</span>
+                        <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl">
+                            From raw conversations to polished episodes that captivate. We handle everything from recording to distribution, so you can focus on creating great content.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="service-stat-card">
+                                <div class="service-stat-number">10K+</div>
+                                <div class="service-stat-label">Hours Produced</div>
+                            </div>
+                            <div class="service-stat-card">
+                                <div class="service-stat-number">500+</div>
+                                <div class="service-stat-label">Episodes Live</div>
                             </div>
                         </div>
-                        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
-                            Great podcasts aren't recorded<span class="text-primary font-bold">*</span> they're sculpted.
-                        </p>
-                        <ul class="service-features">
-                            <li>✓ Crisp audio that sounds like butter</li>
-                            <li>✓ Aesthetic visuals people screenshot</li>
-                            <li>✓ Smooth edits that feel cinematic</li>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 text-sm md:text-base text-gray-700">
+                                <span class="text-primary font-bold mt-0.5">✓</span>
+                                <span>Studio-quality audio recording and mixing</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm md:text-base text-gray-700">
+                                <span class="text-primary font-bold mt-0.5">✓</span>
+                                <span>Professional video with dynamic angles</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm md:text-base text-gray-700">
+                                <span class="text-primary font-bold mt-0.5">✓</span>
+                                <span>Complete post-production and distribution</span>
+                            </li>
                         </ul>
-                        <p class="text-base text-gray-600 mt-4 italic">
-                            You bring the ideas. We make them legendary.
-                        </p>
                     </div>
                     
                     <!-- Reels Content -->
                     <div class="service-content" data-service="reels">
                         <div class="service-badge">
-                            <span class="badge-icon">⚡</span>
-                            <span class="badge-text">VIRAL FACTORY</span>
+                            <span class="badge-text">REELS</span>
                         </div>
-                        <h3 class="text-4xl md:text-5xl font-black mb-6 letter-tight leading-tight">
-                            Reels That Hit Like a <span class="text-primary">Plot Twist</span>.
+                        <h3 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4 letter-tight leading-tight text-gray-900">
+                            Scroll-Stopping<br>
+                            <span class="text-primary">60-Second Stories</span>
                         </h3>
-                        <div class="service-stats mb-6">
-                            <div class="stat-item">
-                                <span class="stat-number">50M+</span>
-                                <span class="stat-label">Views Generated</span>
+                        <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl">
+                            In a world of endless scrolling, we create reels that make thumbs stop. Fast-paced, attention-grabbing content designed to go viral.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="service-stat-card">
+                                <div class="service-stat-number">50M+</div>
+                                <div class="service-stat-label">Views Generated</div>
+                            </div>
+                            <div class="service-stat-card">
+                                <div class="service-stat-number">2M+</div>
+                                <div class="service-stat-label">Engagements</div>
                             </div>
                         </div>
-                        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
-                            Attention spans are shrinking. Your content shouldn't.
-                        </p>
-                        <ul class="service-features">
-                            <li>✓ Fast cuts that keep thumbs frozen</li>
-                            <li>✓ Bold hooks in the first 0.5 seconds</li>
-                            <li>✓ Visuals people can't scroll past</li>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 text-sm md:text-base text-gray-700">
+                                <span class="text-primary font-bold mt-0.5">✓</span>
+                                <span>Hooks that capture in 0.5 seconds</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm md:text-base text-gray-700">
+                                <span class="text-primary font-bold mt-0.5">✓</span>
+                                <span>Dynamic editing with trending formats</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm md:text-base text-gray-700">
+                                <span class="text-primary font-bold mt-0.5">✓</span>
+                                <span>Optimized for Instagram, YouTube and TikTok</span>
+                            </li>
                         </ul>
-                        <p class="text-base text-gray-600 mt-4 italic">
-                            They'll watch. They'll rewatch. They'll share. They'll save.
-                        </p>
                     </div>
                     
-                    <!-- Ad Shoots Content -->
+                    <!-- Advertisement Shoots Content -->
                     <div class="service-content" data-service="ad-shoots">
                         <div class="service-badge">
-                            <span class="badge-icon">🎬</span>
-                            <span class="badge-text">COMMERCIAL POWER</span>
+                            <span class="badge-text">ADVERTISEMENT SHOOTS</span>
                         </div>
-                        <h3 class="text-4xl md:text-5xl font-black mb-6 letter-tight leading-tight">
-                            Ads That Don't Feel Like Ads<br>
-                            <span class="highlight-underline">They Feel Like Obsessions</span>.
+                        <h3 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4 letter-tight leading-tight text-gray-900">
+                            Ads That Don't Feel Like Ads,<br>
+                            <span class="text-primary">They Feel Like Stories</span>
                         </h3>
-                        <div class="service-stats mb-6">
-                            <div class="stat-item">
-                                <span class="stat-number">3.2x</span>
-                                <span class="stat-label">Avg Conversion Lift</span>
+                        <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl">
+                            We create ad films that blend storytelling with psychology. Your brand becomes memorable, the viewer becomes a believer, and conversion rates soar.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="service-stat-card">
+                                <div class="service-stat-number">3.2x</div>
+                                <div class="service-stat-label">Avg Conversion Lift</div>
+                            </div>
+                            <div class="service-stat-card">
+                                <div class="service-stat-number">100+</div>
+                                <div class="service-stat-label">Brand Campaigns</div>
                             </div>
                         </div>
-                        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
-                            We build ad films that blend <span class="font-bold">storytelling</span> with <span class="font-bold">psychology</span>.
-                        </p>
-                        <ul class="service-features">
-                            <li>✓ Your brand becomes the hero</li>
-                            <li>✓ The viewer becomes the believer</li>
-                            <li>✓ Conversion rates become bragging rights</li>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 text-sm md:text-base text-gray-700">
+                                <span class="text-primary font-bold mt-0.5">✓</span>
+                                <span>Concept-to-execution creative direction</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm md:text-base text-gray-700">
+                                <span class="text-primary font-bold mt-0.5">✓</span>
+                                <span>High-production value with cinema-grade equipment</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm md:text-base text-gray-700">
+                                <span class="text-primary font-bold mt-0.5">✓</span>
+                                <span>Performance-focused content that converts</span>
+                            </li>
                         </ul>
-                        <p class="text-base text-gray-600 mt-4 italic">
-                            High energy. High clarity. Engineered for impact.
-                        </p>
                     </div>
                     
                     <!-- Events Content -->
                     <div class="service-content" data-service="events">
                         <div class="service-badge">
-                            <span class="badge-icon">🎪</span>
-                            <span class="badge-text">LIVE CAPTURE</span>
+                            <span class="badge-text">EVENTS</span>
                         </div>
-                        <h3 class="text-4xl md:text-5xl font-black mb-6 letter-tight leading-tight">
-                            Events That Don't Fade<br>
-                            <span class="text-primary">They Live Forever</span> Online.
+                        <h3 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4 letter-tight leading-tight text-gray-900">
+                            Events That Live<br>
+                            <span class="text-primary">Forever Online</span>
                         </h3>
-                        <div class="service-stats mb-6">
-                            <div class="stat-item">
-                                <span class="stat-number">200+</span>
-                                <span class="stat-label">Events Covered</span>
+                        <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl">
+                            We capture the real energy of your events. From corporate conferences to product launches, we turn moments into memories that resonate beyond the venue.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="service-stat-card">
+                                <div class="service-stat-number">200+</div>
+                                <div class="service-stat-label">Events Covered</div>
+                            </div>
+                            <div class="service-stat-card">
+                                <div class="service-stat-number">24hr</div>
+                                <div class="service-stat-label">Delivery Time</div>
                             </div>
                         </div>
-                        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
-                            We capture what most teams miss<span class="text-primary font-bold">*</span> the real energy.
-                        </p>
-                        <ul class="service-features">
-                            <li>✓ Corporate events to product launches</li>
-                            <li>✓ Dynamic edits & crisp highlights</li>
-                            <li>✓ Storytelling that echoes beyond the venue</li>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 text-sm md:text-base text-gray-700">
+                                <span class="text-primary font-bold mt-0.5">✓</span>
+                                <span>Multi-camera coverage for full perspective</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm md:text-base text-gray-700">
+                                <span class="text-primary font-bold mt-0.5">✓</span>
+                                <span>Same-day highlights and next-day full edits</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm md:text-base text-gray-700">
+                                <span class="text-primary font-bold mt-0.5">✓</span>
+                                <span>Storytelling that captures the atmosphere</span>
+                            </li>
                         </ul>
-                        <p class="text-base text-gray-600 mt-4 italic">
-                            One event. Infinite replays.
-                        </p>
                     </div>
                     
                     <!-- Product Photography Content -->
                     <div class="service-content" data-service="product-photography">
                         <div class="service-badge">
-                            <span class="badge-icon">📸</span>
-                            <span class="badge-text">PRODUCT SEDUCTION</span>
+                            <span class="badge-text">PRODUCT PHOTOGRAPHY</span>
                         </div>
-                        <h3 class="text-4xl md:text-5xl font-black mb-6 letter-tight leading-tight">
-                            We Don't Take Photos.<br>
-                            We Make Products <span class="highlight-underline">Irresistible</span>.
+                        <h3 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4 letter-tight leading-tight text-gray-900">
+                            Product Visuals That<br>
+                            <span class="text-primary">Convert Browsers to Buyers</span>
                         </h3>
-                        <div class="service-stats mb-6">
-                            <div class="stat-item">
-                                <span class="stat-number">5000+</span>
-                                <span class="stat-label">Products Shot</span>
+                        <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl">
+                            Your product deserves more than a white background. We create visuals that stop scrolling, capture attention, and drive sales.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="service-stat-card">
+                                <div class="service-stat-number">5000+</div>
+                                <div class="service-stat-label">Products Shot</div>
+                            </div>
+                            <div class="service-stat-card">
+                                <div class="service-stat-number">40%</div>
+                                <div class="service-stat-label">Avg Sales Increase</div>
                             </div>
                         </div>
-                        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
-                            Your product deserves more than a white background.
-                        </p>
-                        <ul class="service-features">
-                            <li>✓ Visuals that seduce attention</li>
-                            <li>✓ Stop scrolling moments</li>
-                            <li>✓ "Maybe later" becomes "add to cart"</li>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 text-sm md:text-base text-gray-700">
+                                <span class="text-primary font-bold mt-0.5">✓</span>
+                                <span>Lifestyle shots that tell your product story</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm md:text-base text-gray-700">
+                                <span class="text-primary font-bold mt-0.5">✓</span>
+                                <span>Studio setups with premium lighting</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm md:text-base text-gray-700">
+                                <span class="text-primary font-bold mt-0.5">✓</span>
+                                <span>E-commerce ready with fast turnaround</span>
+                            </li>
                         </ul>
-                        <p class="text-base text-gray-600 mt-4 italic">
-                            Clean. Crisp. Premium. Designed to sell.
-                        </p>
                     </div>
                     
                     <!-- Case Studies Content -->
                     <div class="service-content" data-service="case-studies">
                         <div class="service-badge">
-                            <span class="badge-icon">📊</span>
-                            <span class="badge-text">SUCCESS STORIES</span>
+                            <span class="badge-text">CASE STUDIES</span>
                         </div>
-                        <h3 class="text-4xl md:text-5xl font-black mb-6 letter-tight leading-tight">
-                            Case Studies That <span class="text-primary">Convert</span>,<br>
-                            Not Just <span class="line-through text-gray-400">Bore</span>.
+                        <h3 class="text-3xl md:text-4xl lg:text-5xl font-black mb-4 letter-tight leading-tight text-gray-900">
+                            Case Studies That<br>
+                            <span class="text-primary">Educate and Persuade</span>
                         </h3>
-                        <div class="service-stats mb-6">
-                            <div class="stat-item">
-                                <span class="stat-number">85%</span>
-                                <span class="stat-label">Lead Quality Increase</span>
+                        <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl">
+                            We transform success stories into compelling visual narratives. Data-driven content that builds trust and demonstrates real-world impact.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="service-stat-card">
+                                <div class="service-stat-number">85%</div>
+                                <div class="service-stat-label">Lead Quality Increase</div>
+                            </div>
+                            <div class="service-stat-card">
+                                <div class="service-stat-number">50+</div>
+                                <div class="service-stat-label">Case Studies Created</div>
                             </div>
                         </div>
-                        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
-                            We turn success stories into <span class="font-bold">cinematic explanations</span>.
-                        </p>
-                        <ul class="service-features">
-                            <li>✓ Clear breakdowns people actually finish</li>
-                            <li>✓ On-point editing</li>
-                            <li>✓ Visuals that trigger "I want this too"</li>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 text-sm md:text-base text-gray-700">
+                                <span class="text-primary font-bold mt-0.5">✓</span>
+                                <span>Data visualization and motion graphics</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm md:text-base text-gray-700">
+                                <span class="text-primary font-bold mt-0.5">✓</span>
+                                <span>Client testimonials with professional production</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm md:text-base text-gray-700">
+                                <span class="text-primary font-bold mt-0.5">✓</span>
+                                <span>Before and after storytelling that converts</span>
+                            </li>
                         </ul>
-                        <p class="text-base text-gray-600 mt-4 italic">
-                            Your wins get the spotlight they deserve.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -1080,7 +1146,7 @@
     </section>
     
     <!-- Studio Section -->
-    <section id="studio" class="py-24 md:py-32 px-6 lg:px-12 bg-dark text-white relative overflow-hidden">
+    <section id="studio" class="py-12 md:py-24 lg:py-32 px-6 lg:px-12 bg-dark text-white relative overflow-hidden">
         <!-- Background Elements -->
         <div class="absolute inset-0 overflow-hidden pointer-events-none">
             <div class="absolute top-1/3 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
@@ -1093,7 +1159,7 @@
         
         <div class="max-w-container mx-auto relative z-10">
             <!-- Section Header -->
-            <div class="text-center mb-20 scroll-animate">
+            <div class="text-center mb-12 md:mb-20 scroll-animate">
                 <div class="flex items-center justify-center gap-6 mb-8">
                     <div class="h-px bg-gradient-to-r from-transparent via-primary to-transparent flex-1 max-w-32"></div>
                     <img src="static/logo/whymedia-black-bg.png" alt="WhyMedia Logo" class="studio-header-logo h-16 md:h-20 lg:h-24 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300">
@@ -1106,68 +1172,68 @@
             
             <!-- Creative Bento Box Grid Gallery -->
             <div class="studio-bento-grid scroll-animate delay-200">
-                <!-- Large Featured Image (Spans 2 rows, 2 columns) - Main Production Floor -->
+                <!-- Large Featured Image (Spans 2 rows, 2 columns) - Main Studio -->
                 <div class="studio-item studio-item-large studio-item-featured" data-aos="fade-up">
                     <div class="studio-image-wrapper">
-                        <img src="static/studio/DSC01642.JPG" alt="WhyMedia Studio - Main Space" class="studio-image" loading="lazy">
+                        <img src="static/studio/studio.jpg" alt="WhyMedia Studio - Where the Magic Happens" class="studio-image" loading="lazy">
                         <div class="studio-overlay">
                             <div class="studio-overlay-content">
-                                <h3 class="studio-title">Main Production Floor</h3>
-                                <p class="studio-description">Where stories come to life</p>
+                                <h3 class="studio-title">Where the Magic Happens</h3>
+                                <p class="studio-description">Our studio - where raw footage becomes viral content</p>
                             </div>
                         </div>
                         <div class="studio-corner-badge">Featured</div>
                     </div>
                 </div>
                 
-                <!-- Tall Image (Spans 2 rows, 1 column) - Professional Gear -->
-                <div class="studio-item studio-item-tall" data-aos="fade-up" data-aos-delay="100">
+                <!-- Wide Image (Spans 1 row, 2 columns) - Studio View 2 -->
+                <div class="studio-item studio-item-wide" data-aos="fade-up" data-aos-delay="100">
                     <div class="studio-image-wrapper">
-                        <img src="static/studio/DSC01643.JPG" alt="WhyMedia Studio - Equipment" class="studio-image" loading="lazy">
+                        <img src="static/studio/studio-2.jpg" alt="WhyMedia Studio View" class="studio-image" loading="lazy">
                         <div class="studio-overlay">
                             <div class="studio-overlay-content">
-                                <h3 class="studio-title">Professional Gear</h3>
-                                <p class="studio-description">State-of-the-art equipment</p>
+                                <h3 class="studio-title">The Recording Sanctum</h3>
+                                <p class="studio-description">Cinema-quality setup for authentic storytelling</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Wide Image (Spans 1 row, 2 columns) - Creative Corner -->
+                <!-- Wide Image (Spans 1 row, 2 columns) - Coffee/Pantry -->
                 <div class="studio-item studio-item-wide" data-aos="fade-up" data-aos-delay="200">
                     <div class="studio-image-wrapper">
-                        <img src="static/studio/DSC01644.JPG" alt="WhyMedia Studio - Creative Space" class="studio-image" loading="lazy">
+                        <img src="static/studio/coffee.jpg" alt="WhyMedia Pantry - Creativity Refill Zone" class="studio-image" loading="lazy">
                         <div class="studio-overlay">
                             <div class="studio-overlay-content">
-                                <h3 class="studio-title">Creative Corner</h3>
-                                <p class="studio-description">Collaboration meets innovation</p>
+                                <h3 class="studio-title">Creativity Refill Zone</h3>
+                                <p class="studio-description">Where we fuel our creative minds with caffeine & ideas</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Regular Square Image - Details Matter -->
+                <!-- Regular Square Image - Office Workspace -->
                 <div class="studio-item studio-item-square" data-aos="fade-up" data-aos-delay="300">
                     <div class="studio-image-wrapper">
-                        <img src="static/studio/DSC01642 (1).JPG" alt="WhyMedia Studio - Detail Shot" class="studio-image" loading="lazy">
+                        <img src="static/studio/office-2.jpg" alt="WhyMedia Office - The Command Center" class="studio-image" loading="lazy">
                         <div class="studio-overlay">
                             <div class="studio-overlay-content">
-                                <h3 class="studio-title">Details Matter</h3>
-                                <p class="studio-description">Perfection in every frame</p>
+                                <h3 class="studio-title">The Command Center</h3>
+                                <p class="studio-description">Where our team crafts scroll-stopping content</p>
                             </div>
                         </div>
                         <div class="studio-shine-effect"></div>
                     </div>
                 </div>
                 
-                <!-- Regular Square Image - Behind the Scenes -->
+                <!-- Regular Square Image - Creative Corner -->
                 <div class="studio-item studio-item-square" data-aos="fade-up" data-aos-delay="400">
                     <div class="studio-image-wrapper">
-                        <img src="static/studio/20250415_202409.jpg" alt="WhyMedia Studio - Behind the Scenes" class="studio-image" loading="lazy">
+                        <img src="static/studio/creative_corner.jpg" alt="WhyMedia Creative Corner" class="studio-image" loading="lazy">
                         <div class="studio-overlay">
                             <div class="studio-overlay-content">
-                                <h3 class="studio-title">Behind the Scenes</h3>
-                                <p class="studio-description">Making the impossible, possible</p>
+                                <h3 class="studio-title">Creative Corner</h3>
+                                <p class="studio-description">Where ideas meet innovation</p>
                             </div>
                         </div>
                         <div class="studio-shine-effect"></div>
@@ -1185,24 +1251,24 @@
     </section>
     
     <!-- Results Section -->
-    <section id="results-section" class="py-24 md:py-32 px-6 lg:px-12 bg-gradient-to-b from-white to-gray-50" style="min-height: 100vh;">
+    <section id="results-section" class="py-12 md:py-24 lg:py-32 px-6 lg:px-12 bg-gradient-to-b from-white to-gray-50">
         <div class="max-w-container mx-auto">
             <!-- Section Header with Scroll Animation -->
-            <div class="text-center mb-20 max-w-5xl mx-auto">
-                <h2 class="text-6xl md:text-7xl lg:text-8xl font-black letter-tight mb-10 leading-[1.1]" id="results-heading">
+            <div class="text-center mb-10 md:mb-20 max-w-5xl mx-auto">
+                <h2 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black letter-tight mb-6 md:mb-10 leading-[1.1]" id="results-heading">
                     <span class="scroll-word">We</span> <span class="scroll-word">Deliver</span> <span class="scroll-word text-primary">Results</span><span class="scroll-word">.</span><br>
                     <span class="scroll-word">Not</span> <span class="scroll-word">Just</span> <span class="scroll-word">Promises</span><span class="scroll-word">.</span>
                 </h2>
                 
                 <!-- New Compelling Copy -->
-                <div class="mt-6 space-y-4 text-left md:text-center" id="results-copy">
-                    <p class="text-2xl md:text-3xl lg:text-4xl font-bold leading-relaxed">
+                <div class="mt-4 md:mt-6 space-y-3 md:space-y-4 text-left md:text-center" id="results-copy">
+                    <p class="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold leading-relaxed">
                         <span class="scroll-word">I</span> <span class="scroll-word">know</span> <span class="scroll-word">you</span> <span class="scroll-word">must</span> <span class="scroll-word">have</span> <span class="scroll-word">met</span> <span class="scroll-word">many</span> <span class="scroll-word">such</span> <span class="scroll-word">so</span> <span class="scroll-word">called</span> <span class="scroll-word text-primary">"Agencies"</span>
                     </p>
-                    <p class="text-xl md:text-2xl lg:text-3xl font-semibold leading-relaxed">
+                    <p class="text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold leading-relaxed">
                         <span class="scroll-word">who</span> <span class="scroll-word">have</span> <span class="scroll-word">sold</span> <span class="scroll-word">you</span> <span class="scroll-word">only</span> <span class="scroll-word line-through">hype</span> <span class="scroll-word">and</span> <span class="scroll-word line-through">fake</span> <span class="scroll-word line-through">promises</span><span class="scroll-word">.</span>
                     </p>
-                    <p class="text-2xl md:text-3xl lg:text-4xl font-bold leading-relaxed mt-4">
+                    <p class="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold leading-relaxed mt-3 md:mt-4">
                         <span class="scroll-word">we</span> <span class="scroll-word">don't,</span> <span class="scroll-word">we</span> <span class="scroll-word">let</span> <span class="scroll-word">our</span> <span class="scroll-word">work</span> <span class="scroll-word">speak</span> <span class="scroll-word">on</span> <span class="scroll-word">behalf</span> <span class="scroll-word">of</span> <span class="scroll-word">us</span><span class="scroll-word">.</span>
                     </p>
                 </div>
@@ -1211,14 +1277,14 @@
     </section>
     
     <!-- Ecosystem Section -->
-    <section class="py-24 md:py-32 px-6 lg:px-12 bg-gradient-to-b from-gray-50 to-white">
+    <section class="py-12 md:py-24 lg:py-32 px-6 lg:px-12 bg-gradient-to-b from-gray-50 to-white">
         <div class="max-w-container mx-auto">
             <!-- Stats & Network Visualization -->
-            <div class="mt-12">
+            <div class="mt-6 md:mt-12">
                 <!-- Ecosystem -->
                 <div class="scroll-animate">
-                    <h3 class="text-4xl md:text-5xl lg:text-6xl font-black text-dark text-center mb-8 md:mb-10">
-                        We have Built an <span class="bg-primary text-white px-6 py-3 inline-block transform -rotate-1 rounded-xl shadow-2xl">Ecosystem</span>
+                    <h3 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black text-dark text-center mb-6 md:mb-10">
+                        We have Built an <span class="bg-primary text-white px-3 py-1.5 md:px-6 md:py-3 inline-block transform -rotate-1 rounded-lg md:rounded-xl shadow-xl md:shadow-2xl">Ecosystem</span>
                     </h3>
                     
                     
@@ -1332,14 +1398,14 @@
         <div class="max-w-container mx-auto relative z-10">
             <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
                 <!-- Left Side - Einstein Image -->
-                <div class="scroll-animate flex justify-center lg:justify-end">
-                    <div class="relative group">
-                        <div class="absolute -inset-6 bg-gradient-to-r from-primary to-red-600 rounded-3xl opacity-20 group-hover:opacity-40 blur-2xl transition-opacity duration-300"></div>
-                        <div class="relative bg-white p-3 rounded-3xl shadow-2xl transform group-hover:scale-105 group-hover:rotate-2 transition-all duration-300">
+                <div class="scroll-animate flex justify-center lg:justify-end px-2 sm:px-0">
+                    <div class="relative group w-full max-w-full">
+                        <div class="absolute -inset-4 sm:-inset-6 bg-gradient-to-r from-primary to-red-600 rounded-2xl sm:rounded-3xl opacity-20 group-hover:opacity-40 blur-2xl transition-opacity duration-300"></div>
+                        <div class="relative bg-white p-2 sm:p-3 rounded-xl sm:rounded-2xl lg:rounded-3xl shadow-2xl transform group-hover:scale-105 group-hover:rotate-2 transition-all duration-300 w-full max-w-full overflow-hidden">
                             <img src="static/images/einstein.jpg" loading="lazy" 
                                  alt="Einstein - Only for serious minds" 
-                                 class="w-full h-auto rounded-2xl"
-                                 style="max-width: 500px; min-width: 350px; filter: grayscale(100%) contrast(1.1);">
+                                 class="w-full h-auto rounded-lg sm:rounded-xl lg:rounded-2xl einstein-image"
+                                 style="max-width: 100%;">
                         </div>
                     </div>
                 </div>
@@ -1447,61 +1513,84 @@
     </section>
     
     <!-- Footer -->
-    <footer class="bg-dark text-white py-12 px-6 lg:px-12 border-t border-white/10">
+    <footer class="bg-dark text-white py-16 px-4 sm:px-6 lg:px-12 border-t border-white/10">
         <div class="max-w-container mx-auto">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
-                <!-- Brand -->
-                <div>
-                    <div class="mb-4">
+            <!-- Two Column Layout -->
+            <div class="grid md:grid-cols-2 gap-12 md:gap-16 lg:gap-24 mb-12">
+                <!-- Left Column - Big Brand Name -->
+                <div class="flex flex-col justify-between">
+                    <div>
+                        <h2 class="footer-brand-text text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white leading-none mb-6">
+                            WHY<br>MEDIA
+                        </h2>
+                        <p class="text-gray-400 text-base md:text-lg max-w-md mb-6">
+                            Creative production house that delivers results.
+                        </p>
+                    </div>
+                    
+                    <!-- Logo -->
+                    <div class="mt-8">
                         <a href="#" class="inline-block">
-                            <img src="static/logo/WhyMedia.png" alt="WhyMedia Logo" class="footer-logo h-12 md:h-16 w-auto hover:opacity-80 transition-opacity duration-300">
+                            <img src="static/logo/WhyMedia.png" alt="WhyMedia Logo" class="footer-logo h-16 md:h-20 w-auto hover:opacity-80 transition-opacity duration-300">
                         </a>
                     </div>
-                    <p class="text-gray-400 text-sm">
-                        Creative production house that delivers results.
-                    </p>
                 </div>
                 
-                <!-- Links -->
-                <div>
-                    <h4 class="font-bold mb-4">Company</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
-                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-bold mb-4">Services</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="#services" class="hover:text-white transition-colors">Podcasts</a></li>
-                        <li><a href="#services" class="hover:text-white transition-colors">Reels</a></li>
-                        <li><a href="#services" class="hover:text-white transition-colors">Events</a></li>
-                        <li><a href="#services" class="hover:text-white transition-colors">Product Photography</a></li>
-                        <li><a href="#services" class="hover:text-white transition-colors">Case Studies</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-bold mb-4">Follow Us</h4>
-                    <div class="flex space-x-4">
-                        <a href="https://www.instagram.com/whymedia.in?igsh=MXR5Z3hqemFmNzR6Mg==" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        </a>
-                        <a href="https://youtube.com/@whymediastudio?si=ng8Ww1LCOIkvNFwk" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-                        </a>
-                        <a href="https://www.linkedin.com/company/why-media-studio/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        </a>
+                <!-- Right Column - Links and Social -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-8">
+                    <!-- Company Links -->
+                    <div>
+                        <h4 class="font-bold text-lg mb-4 text-white">Company</h4>
+                        <ul class="space-y-3 text-gray-400">
+                            <li><a href="#about" class="hover:text-primary transition-colors text-sm">About</a></li>
+                            <li><a href="#services" class="hover:text-primary transition-colors text-sm">Services</a></li>
+                            <li><a href="#studio" class="hover:text-primary transition-colors text-sm">Studio</a></li>
+                            <li><a href="https://calendly.com/whymediaa/30min" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors text-sm">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Services Links -->
+                    <div>
+                        <h4 class="font-bold text-lg mb-4 text-white">Services</h4>
+                        <ul class="space-y-3 text-gray-400">
+                            <li><a href="#services" class="hover:text-primary transition-colors text-sm">Podcasts</a></li>
+                            <li><a href="#services" class="hover:text-primary transition-colors text-sm">Reels</a></li>
+                            <li><a href="#services" class="hover:text-primary transition-colors text-sm">Events</a></li>
+                            <li><a href="#services" class="hover:text-primary transition-colors text-sm">Photography</a></li>
+                            <li><a href="#services" class="hover:text-primary transition-colors text-sm">Case Studies</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div>
+                        <h4 class="font-bold text-lg mb-4 text-white">Follow Us</h4>
+                        <div class="flex flex-col space-y-3">
+                            <a href="https://www.instagram.com/whymedia.in?igsh=MXR5Z3hqemFmNzR6Mg==" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors group">
+                                <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors border border-transparent group-hover:border-primary/50">
+                                    <svg class="w-5 h-5 group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                </div>
+                                <span class="text-sm">Instagram</span>
+                            </a>
+                            <a href="https://youtube.com/@whymediastudio?si=ng8Ww1LCOIkvNFwk" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors group">
+                                <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors border border-transparent group-hover:border-primary/50">
+                                    <svg class="w-5 h-5 group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                                </div>
+                                <span class="text-sm">YouTube</span>
+                            </a>
+                            <a href="https://www.linkedin.com/company/why-media-studio/" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors group">
+                                <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors border border-transparent group-hover:border-primary/50">
+                                    <svg class="w-5 h-5 group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                </div>
+                                <span class="text-sm">LinkedIn</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
             
             <!-- Copyright -->
             <div class="pt-8 border-t border-white/10 text-center text-gray-400 text-sm">
-                <p>© 2025 WhyMedia. All Rights Reserved.</p>
+                <p>© 2025 WhyMedia. All Rights Reserved. | Freezing Time, One Frame at a Time.</p>
             </div>
         </div>
     </footer>
