@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhyMedia - Digital Card</title>
+    <link rel="shortcut icon" href="https://goodconnext.com/card/whymedia/Assets/favicon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://goodconnext.com/card/whymedia/css/index_style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <!-- shareon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.iife.js" defer init></script>
+</head>
+<body>
+    <div class="content" id="content">
+        <div class="cardbgimageblock"></div>
+        <div class="cardbgimagebottomblock">
+            <div class="randomImage" id="randomImage">
+                <img id="imageSource" src="https://goodconnext.com/card/whymedia/Assets/Char2.svg" alt="Random Character" />
+            </div>
+        </div>
+        <div class="cardbgcolorblock"></div>
+        <div class="card-section">
+            <div class="container" id="container">
+                <form action="">
+                    <div>
+                        <p>Exchange your contact with me </p>
+                        <span>
+                            <input id="form-name" type="text" placeholder="Name" required="">
+                            <div class="err" id="nameerr"></div>
+                        </span>
+                        <span>
+                            <input id="form-mobile" type="tel" placeholder="Mobile" required="">
+                            <div class="err" id="mobileerr"></div>
+                        </span>
+                        <span>
+                            <input id="form-email" type="email" placeholder="Email" required="">
+                            <div class="err" id="emailerr"></div>
+                        </span>
+                        <span>
+                            <input id="form-companyname" type="text" placeholder="Company Name">
+                            <div class="err" id="companyerr"></div>
+                        </span>
+                        <span>
+                            <input id="form-digitalcard" type="text" placeholder="Digital card">
+                            <div class="err" id="carderr"></div>
+                        </span>
+                    </div>
+                    <div class="formbtn">
+                        <button type="button" onclick="sendToWhatsapp()">Submit</button>
+                        <button id="formclosebtn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card">
+                <div class="card-header" id="card-banner">
+                    <img id="banner-image-main" src="https://goodconnext.com/card/whymedia/Assets/Banner.svg" alt="banner" />
+                    <div class="profile-imagemaincontainer">
+                        <div class="profile-image-container">
+                            <div class="profile-image">
+                                <img src="https://goodconnext.com/card/whymedia/Assets/Profile/Profile.png" onerror='this.src="https://goodconnext.com/card/whymedia/Assets/Profile/Profile.png"' alt="profile-image" id="profile-image">
+                            </div>
+                        </div>
+                        <div class="name-container">
+                            <h2 class="name" id="name">Name</h2>
+                            <p class="title" id="role">Role</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="loading-container">
+                        <div class="after-content" id="after-content">
+                            <div class="contact-section">
+                                <div class="left">
+                                    <div class="phone-container">
+                                        <span class="icon"><img src="https://goodconnext.com/card/whymedia/Assets/phone_icon.svg" alt="phone_icon"></span>
+                                        <div class="phone-numbers">
+                                            <a href="#" title="Call Phone Number" style="font-weight: bold;" id="primary-mobile">+91 123 456 7890</a>
+                                        </div>
+                                    </div>
+                                    <a href="mailto:email@mail.in" title="Send an Email"><span class="icon"><img src="https://goodconnext.com/card/whymedia/Assets/email_icon.svg" alt="email_icon"></span><span id="email">email@mail.in</span></a>
+                                </div>
+                                <div class="right">
+                                    <a class="whatsapp_icon social-icon" id="whatsapp" href="https://wa.me/+919845347204" title="Whatsapp" target="_blank"><img src="https://goodconnext.com/card/whymedia/Assets/whatsapp_icon.svg" alt="whatsapp_icon"></a>
+                                    <a class="social-icon" id="linkedin" href="https://www.linkedin.com/" title="Linkedin" target="_blank"><img src="https://goodconnext.com/card/whymedia/Assets/linkedin_icon.svg" alt="linkedin_icon"></a>
+                                </div>
+                            </div>
+
+                            <div class="social-media-section share-section">
+                                <div class="social-media-links-right AddtoContactsdesk">
+                                    <a id="qrpreviewbtn" title="Download QRcode Image" target="_blank"><img src="https://goodconnext.com/card/whymedia/Assets/Share_icon.svg" alt="Download_icon"></a>
+                                    <a title="Exchange Contacts" target="_blank" id="openbtn"><img src="https://goodconnext.com/card/whymedia/Assets/ExchangeContact.svg"></a>
+                                    <a id="vcarddownloadBtn" title="Download VCard" target="_blank"><img src="https://goodconnext.com/card/whymedia/Assets/SavetoContacts.svg" alt="VCard_icon"></a>
+                                </div>
+                            </div>
+
+                            <div class="msg-section">
+                                <img src="https://goodconnext.com/card/whymedia/Assets/MessageBox.svg" alt="MessageBox_Image">
+                            </div>
+
+                            <div class="video-section">
+                                <div class="video-container">
+                                    <video id="video1" class="video active" autoplay loop muted playsinline>
+                                        <source src="https://goodconnext.com/card/whymedia/Assets/Video/video.webm" type="video/webm">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div class="services-section">
+                                <ul id="services">
+                                    <img src="https://goodconnext.com/card/whymedia/Assets/Services_Block.svg" alt="Services_Block">
+                                </ul>
+                            </div>
+
+                            <div class="appointment-section">
+                                <a onclick="openDemo()" title="Book Appointment">
+                                    <img src="https://goodconnext.com/card/whymedia/Assets/BookAppointment.svg" alt="BookAppointment_Image">
+                                </a>
+                            </div>
+
+                            <div class="company-section">
+                                <h4 class="company">COMPANY</h4>
+                                <h2 class="company-name" id="company-name">JAYKAP Private Limited</h2>
+                                <h2 class="company-address" id="company-address">
+                                    3rd Floor, Urban Vault Building 17th Cross Road, Opp. Allen Solly, Sector 6, HSR Layout, Bengaluru, Karnataka - 560 102. INDIA
+                                </h2>
+                                <div class="company-sectionaddress">
+                                    <a href="tel:+919035460096">+91 <b>903 546 0096</b></a>
+                                    <span>|</span>
+                                    <a href="mailto:business@whymedia.in"><b>business</b>@<b>whymedia</b>.in</a>
+                                </div>
+                            </div>
+
+                            <div class="social-media-section">
+                                <a href="https://maps.app.goo.gl/NtdFcKNU8myzzqvr8" target="_blank" id="google-map-link" class="google-map-link" title="Google Map Link">
+                                    <img src="https://goodconnext.com/card/whymedia/Assets/googlemap_icon.svg" alt="GoogleMap_icon">
+                                </a>
+                                <div class="social-media-links-left">
+                                    <a href="https://youtube.com/@whymediastudio?si=ng8Ww1LCOIkvNFwk" title="Youtube" target="_blank"><img src="https://goodconnext.com/card/whymedia/Assets/youtube_icon.svg" alt="youtube_icon"></a>
+                                    <a href="https://www.instagram.com/whymedia.in?igsh=MXR5Z3hqemFmNzR6Mg==" title="Instagram" target="_blank"><img src="https://goodconnext.com/card/whymedia/Assets/Instagram_icon.svg" alt="instagram_icon"></a>
+                                    <a href="https://www.linkedin.com/company/why-media-studio/" title="Linkedin" target="_blank"><img src="https://goodconnext.com/card/whymedia/Assets/linkedin_icon.svg" alt="linkedin_icon"></a>
+                                </div>
+                            </div>
+
+                            <div class="card_companywebsite">
+                                <a href="https://www.whymedia.in" title="Visit Website"><span id="website">www.<b>whymedia</b>.in</span></a>
+                                <a href="https://www.whymedia.in" title="Visit Website" class="global-icon">
+                                    <img src="https://goodconnext.com/card/whymedia/Assets/global_icon.svg" alt="global_icon">
+                                </a>
+                            </div>
+                        </div>
+                        <div id="loading" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                            <img src="https://goodconnext.com/card/whymedia/Assets/loading_icon.gif" alt="Loading..." width="25">
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <a href="https://goodux.in" class="footer-link"><img src="https://goodconnext.com/card/whymedia/Assets/Poweredby.svg" alt="Poweredby_logo"></a>
+                    </div>
+                    <div class="download-section AddtoContactsmobile" id="download-section">
+                        <div class="download-leftSection">
+                            <a id="qrpreviewbtnmobile" title="Download QRcode Image" target="_blank"><img src="https://goodconnext.com/card/whymedia/Assets/Share_icon.svg" alt="Download_icon"></a>
+                            <a title="Exchange Contacts" target="_blank" id="openbtn-clone"><img src="https://goodconnext.com/card/whymedia/Assets/ExchangeContact.svg"></a>
+                            <a id="vcarddownloadBtnMobile" title="Download VCard" target="_blank"><img src="https://goodconnext.com/card/whymedia/Assets/SavetoContacts.svg" alt="VCard_icon"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- QR Code / Share Preview Modal -->
+    <div class="card-section preview" id="CardPreview">
+        <div class="card">
+            <div class="ClosebtnBlock" id="Closebtn">
+                <div class="Closebtn">
+                    <img src="https://goodconnext.com/card/whymedia/Assets/Close_btn.svg" alt="Close_btn">
+                </div>
+            </div>
+            <div class="card-content" id="download-area">
+                <div class="card-header" id="card-banner">
+                    <div class="card-banner">
+                        <img src="https://goodconnext.com/card/whymedia/Assets/QRCode_Banner.svg" alt="Banner">
+                    </div>
+                    <div class="profile-imagemaincontainer">
+                        <div class="profile-image-container">
+                            <div class="profile-image">
+                                <img id="profile-image-preview" src="https://goodconnext.com/card/whymedia/Assets/Profile/Profile.png" onerror='this.src="https://goodconnext.com/card/whymedia/Assets/Profile/Profile.png"' alt="profile-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="loading-container">
+                        <div class="after-content" id="after-content-preview">
+                            <div class="name-container">
+                                <h2 class="name" id="namePreview">FullName</h2>
+                                <p class="title" id="rolePreview">Role</p>
+                            </div>
+                            <div class="qrcode" id="qrcodePreview"></div>
+                            <div class="copyurl-section" id="copyurl-section">
+                                <a class="copyLink" href="#" id="copyLink" title="Click Here to CopyURL">
+                                    <img src="https://goodconnext.com/card/whymedia/Assets/CopyURL.svg" alt="">
+                                </a>
+                                <a id="imgdownloadBtn" title="Click To Download" target="_blank"><img src="https://goodconnext.com/card/whymedia/Assets/Download.svg" alt="Download"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-section" id="footer-section-preview">
+                        <div class="share-section">
+                            <h4 class="share-text">Share</h4>
+                            <div class="shareon" data-title="Check out this card!">
+                                <a class="whatsapp"></a>
+                                <a class="linkedin"></a>
+                                <a class="twitter"></a>
+                                <a class="facebook"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-section" id="footer-link">
+                        <a href="https://goodux.in" class="footer-link" title="Visit GoodUX Website" target="_blank"><img src="https://goodconnext.com/card/whymedia/Assets/Poweredby.svg" alt="Poweredby_logo"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Book Appointment Modal -->
+    <div id="book-demo" class="Book_Demosblock flex_center">
+        <div class="Book_Demoslevel flex_center">
+            <div class="Book_Demoslogo">
+                <iframe src="https://calendly.com/whymediaa/30min" style="border:0;border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <a href="javascript:void(0);closeDemo()" class="Book_Demosclosebtn">
+                <div class="Book_Demosbtn">
+                    <img src="https://goodconnext.com/card/whymedia/Assets/Close_btn.svg" alt="Close_btn" title="Close">
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://goodconnext.com/card/whymedia/js/index_main.js"></script>
+
+    <script>
+        // Fallback: if no ?@= param is in the URL, the external script leaves the
+        // spinner running forever. Hide it and show a friendly message instead.
+        (function () {
+            const id = new URLSearchParams(window.location.search).get('@');
+            if (!id) {
+                window.addEventListener('DOMContentLoaded', function () {
+                    var loading = document.getElementById('loading');
+                    var afterContent = document.getElementById('after-content');
+                    if (loading) loading.style.display = 'none';
+                    if (afterContent) {
+                        afterContent.style.visibility = 'visible';
+                        afterContent.style.opacity = '1';
+                    }
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
